@@ -31,7 +31,7 @@ class Menu extends React.Component {
     super();
   }
   render() {
-    return  <div className="App container">
+    return  <div className="App container-fluid">
               <Navbar fluid collapseOnSelect>
                 <Navbar.Header>
                   <Navbar.Brand>
