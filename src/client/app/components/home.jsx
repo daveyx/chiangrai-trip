@@ -5,7 +5,7 @@ import '../../css/home.css';
 import BasePage from './basePage.jsx';
 
 const bgImage = {
-  imgName: "../img/maejaedee.jpg"
+  imgName: BASENAME + "img/maejaedee.jpg"
 }
 
 export default class Home extends BasePage {

@@ -3,7 +3,7 @@ import '../../css/day.css';
 import BasePage from './basePage.jsx';
 
 const bgImage = {
-  imgName: "../img/watrongkhun.jpg"
+  imgName: BASENAME + "img/watrongkhun.jpg"
 }
 
 export default class Day extends BasePage {
