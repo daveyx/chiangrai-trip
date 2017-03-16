@@ -12,6 +12,7 @@ export default class Routes extends React.Component {
   constructor(props) {
     super();
   }
+  
   render() {
     return <Router history={useBasename(() => browserHistory)({ basename: BASENAME })}>
       <Route path="/" component={App}>

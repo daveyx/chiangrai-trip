@@ -26,18 +26,23 @@ class Menu extends React.Component {
   constructor(props) {
     super();
     this.state = { navHeight: 50 };
-    this.handleResize = this.handleResize.bind(this);
+    this.handleResize1 = this.handleResize1.bind(this);
   }
-  handleResize(e = null) {
-    this.setState({ navHeight: ReactDOM.findDOMNode(this._navbar).offsetHeight });
+
+  handleResize1(e = null) {
+    if (this.refs.navbar) {
+      this.setState({ navHeight: ReactDOM.findDOMNode(this._navbar).offsetHeight });
+    }
   }
+
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
+    window.addEventListener('resize', this.handleResize1);
+    this.handleResize1();
   }
+
   render() {
     return  <div className="App" style={{paddingTop: this.state.navHeight}}>
-              <Navbar fluid collapseOnSelect ref={(e) => this._navbar = e} fixedTop >
+              <Navbar ref="navbar" fluid collapseOnSelect ref={(e) => this._navbar = e} fixedTop >
                 <Navbar.Header>
                   <Navbar.Brand>
                     <IndexLink to="/">Scratch</IndexLink>
