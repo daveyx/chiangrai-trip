@@ -10,6 +10,11 @@ var config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      BASENAME: JSON.stringify("/")
+    })
+  ],
   module : {
     loaders : [
       {

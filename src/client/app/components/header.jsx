@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { IndexLink } from 'react-router';
 import {
   Navbar,
