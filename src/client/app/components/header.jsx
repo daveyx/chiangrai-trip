@@ -45,7 +45,7 @@ class Menu extends React.Component {
               <Navbar ref="navbar" fluid collapseOnSelect ref={(e) => this._navbar = e} fixedTop >
                 <Navbar.Header>
                   <Navbar.Brand>
-                    <IndexLink to="/">Scratch</IndexLink>
+                    <IndexLink to="/">Home</IndexLink>
                   </Navbar.Brand>
                   <Navbar.Toggle />
                 </Navbar.Header>
