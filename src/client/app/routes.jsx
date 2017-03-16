@@ -12,16 +12,16 @@ export default class Routes extends React.Component {
   constructor(props) {
     super();
   }
-  
+
   render() {
-    return <Router history={useBasename(() => browserHistory)({ basename: BASENAME })}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Home} />
-        <Route path="day1" component={Day} />
-      </Route>
-      <Route path="*" component={App}>
-        <IndexRoute component={NotFound} />
-      </Route>
-    </Router>;
+    return  <Router history={useBasename(() => browserHistory)({ basename: BASENAME })}>
+              <Route path="/" component={App}>
+                <IndexRoute component={Home} />
+                <Route path="day1" component={Day} />
+              </Route>
+              <Route path="*" component={App}>
+                <IndexRoute component={NotFound} />
+              </Route>
+            </Router>;
   }
 }
