@@ -5,16 +5,7 @@ import {render} from 'react-dom';
 import Routes from './routes.jsx';
 import { browserHistory } from 'react-router';
 
-
 render(
   <Routes history={browserHistory} />,
   document.getElementById('container')
 );
-
-// render(
-//   <div>
-//     <Header />
-//     <MyComponent />
-//   </div>,
-//   document.getElementById('container')
-// );
