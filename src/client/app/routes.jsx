@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { useBasename } from 'history'
 import App from './components/app.jsx';
 import Home from './components/home.jsx';
+import Day from './components/day.jsx';
 import NotFound from './components/notFound.jsx';
 
 export default class Routes extends React.Component {
@@ -15,6 +16,7 @@ export default class Routes extends React.Component {
     return <Router history={useBasename(() => browserHistory)({ basename: BASENAME })}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
+        <Route path="day1" component={Day} />
       </Route>
       <Route path="*" component={App}>
         <IndexRoute component={NotFound} />
