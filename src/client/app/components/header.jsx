@@ -7,6 +7,8 @@ import {
   Navbar,
   Nav,
   NavItem,
+  Modal,
+  Button
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import '../../css/header.css';
@@ -15,6 +17,7 @@ export default class Header extends React.Component {
   constructor(props) {
     super();
   }
+
   render() {
     return  <div>
               <Menu />
@@ -25,7 +28,11 @@ export default class Header extends React.Component {
 class Menu extends React.Component {
   constructor(props) {
     super();
-    this.state = { navHeight: 50 };
+    this.state = {
+      navHeight: 50,
+      showModal: false,
+      modalInfo: ''
+    };
     this.handleResize1 = this.handleResize1.bind(this);
   }
 
@@ -40,8 +47,48 @@ class Menu extends React.Component {
     this.handleResize1();
   }
 
+  close() {
+    this.setState({
+      showModal: false,
+      modalInfo: ""
+    });
+  }
+
+  openEN() {
+    this.setState({
+      showModal: true,
+      modalInfo: "The english language is displayed already."
+    });
+  }
+
+  openTH() {
+    this.setState({
+      showModal: true,
+      modalInfo: "The thai language is currently not available."
+    });
+  }
+
+  openDE() {
+    this.setState({
+      showModal: true,
+      modalInfo: "The german language is currently not available."
+    });
+  }
+
   render() {
     return  <div className="App" style={{paddingTop: this.state.navHeight}}>
+              <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Sorry!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <h4>{this.state.modalInfo}</h4>
+                  <p>If you want to provide a translation, contact me please!</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button onClick={this.close.bind(this)}>Close</Button>
+                </Modal.Footer>
+              </Modal>
               <Navbar ref="navbar" fluid collapseOnSelect ref={(e) => this._navbar = e} fixedTop >
                 <Navbar.Header>
                   <Navbar.Brand>
@@ -72,9 +119,9 @@ class Menu extends React.Component {
                     <LinkContainer to="/day7">
                       <NavItem>Day 7</NavItem>
                     </LinkContainer>
-                    <NavItem>EN</NavItem>
-                    <NavItem>TH</NavItem>
-                    <NavItem>DE</NavItem>
+                    <NavItem eventKey={'EN'} onClick={this.openEN.bind(this)}>EN</NavItem>
+                    <NavItem eventKey={'TH'} onClick={this.openTH.bind(this)}>TH</NavItem>
+                    <NavItem eventKey={'DE'} onClick={this.openDE.bind(this)}>DE</NavItem>
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>

@@ -3,13 +3,15 @@
 import React from 'react';
 import '../../css/home.css';
 import BasePage from './basePage.jsx';
+import {
+  Row
+} from 'react-bootstrap';
 import GMap from './GoogleMaps';
 
 const bgImage = {
   imgName: BASENAME + "img/maejaedee.jpg"
 }
 
-// var initialCenter = { lng: -90.1056957, lat: 29.9717272 };
 var initialCenter = { lng: 99.8325, lat: 19.90858 };
 
 export default class Home extends BasePage {
@@ -27,7 +29,7 @@ export default class Home extends BasePage {
               <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx">daveyx</a></div>
           </div>
           <div className="container">
-            <div className="row">
+            <Row>
               <div className="col-xs-12">
                 <h2 className="text-center">Jaae and David experiencing the north of Thailand</h2>
                 <p className="text-center">Nice to welcome you here! Have fun on this webpage.</p>
@@ -37,7 +39,7 @@ export default class Home extends BasePage {
                 Flying directly to Chiang Rai with VietJetAir was much cheaper than go to Chiang Mai with AirAsia. Furthermore we would had to go from
                 Chiang Mai to Chiang Rai first. But anyway we will visit Chiang Mai on this trip too...<br /><br /></p>
               </div>
-            </div>
+            </Row>
           </div>
           <div className="container-fluid bgimg-1">
             <div className="caption">
@@ -45,7 +47,7 @@ export default class Home extends BasePage {
             </div>
           </div>
           <div className="container">
-            <div className="row">
+            <Row>
               <div className="col-xs-12">
                 <h2 className="text-center">เชียงราย - Chiang Rai</h2>
               </div>
@@ -58,12 +60,12 @@ export default class Home extends BasePage {
               <div className="col-xs-12 col-md-6">
                 About Chiang Rai
               </div>
-            </div>
-            <div className="row">
+            </Row>
+            <Row>
               <div className="col-xs-12">
                 <h2 className="text-center">Our trip from Phuket to Chiang Rai starts...</h2>
               </div>
-            </div>
+            </Row>
           </div>
         </main>
     );
