@@ -3,10 +3,14 @@
 import React from 'react';
 import '../../css/home.css';
 import BasePage from './basePage.jsx';
+import GMap from './GoogleMaps';
 
 const bgImage = {
   imgName: BASENAME + "img/maejaedee.jpg"
 }
+
+// var initialCenter = { lng: -90.1056957, lat: 29.9717272 };
+var initialCenter = { lng: 99.8325, lat: 19.90858 };
 
 export default class Home extends BasePage {
   constructor(props) {
@@ -45,11 +49,19 @@ export default class Home extends BasePage {
               <div className="col-xs-12">
                 <h2 className="text-center">เชียงราย - Chiang Rai</h2>
               </div>
-              <div className="col-xs-6">
+              <div className="col-xs-12 col-md-6">
                 Chiang Rai in Google Maps
+                <div className="map">
+                  <GMap initialCenter={initialCenter} />
+                </div>
               </div>
-              <div className="col-xs-6">
+              <div className="col-xs-12 col-md-6">
                 About Chiang Rai
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12">
+                <h2 className="text-center">Our trip from Phuket to Chiang Rai starts...</h2>
               </div>
             </div>
           </div>
