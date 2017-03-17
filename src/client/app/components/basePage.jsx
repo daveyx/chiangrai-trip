@@ -7,14 +7,11 @@ import Header from './header.jsx';
 export default class BasePage extends Component {
   constructor(props) {
     super();
-
     this.state = {
       wrapperStyle: {
       },
       contentStyle: {
-        backgroundImage: "url(" + props.imgName + ")",
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat'
+        backgroundColor: 'black'
       },
       imgName: props.imgName
     };
@@ -30,32 +27,54 @@ export default class BasePage extends Component {
     if (this.refs.home) {
       if (window.innerWidth >= 992) {
         var minHeight = Math.round(window.innerWidth / 3.5);
-        console.log(minHeight);
-        this.setState({
-          wrapperStyle: {
-            backgroundImage: "url(" + this.state.imgName + ")",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat'
-          },
-          contentStyle: {
-            backgroundImage: 'none',
-            minHeight: minHeight + 'px'
-          }
-        });
+        if (this.state.imgName) {
+          this.setState({
+            wrapperStyle: {
+              backgroundImage: "url(" + this.state.imgName + ")",
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat'
+            },
+            contentStyle: {
+              backgroundImage: 'none',
+              minHeight: minHeight + 'px'
+            }
+          });
+        } else {
+          this.setState({
+            wrapperStyle: {
+              backgroundColor: 'black'
+            },
+            contentStyle: {
+              backgroundImage: 'none',
+              minHeight: minHeight + 'px'
+            }
+          });
+        }
       } else {
         var minHeight = Math.round(window.innerWidth / 3);
-        console.log(minHeight);
-        this.setState({
-          wrapperStyle: {
-            backgroundImage: 'none'
-          },
-          contentStyle: {
-            backgroundImage: "url(" + this.state.imgName + ")",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            minHeight: minHeight + 'px'
-          }
-        });
+        if (this.state.imgName) {
+          this.setState({
+            wrapperStyle: {
+              backgroundImage: 'none'
+            },
+            contentStyle: {
+              backgroundImage: "url(" + this.state.imgName + ")",
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              minHeight: minHeight + 'px'
+            }
+          });
+        } else {
+          this.setState({
+            wrapperStyle: {
+              backgroundImage: 'none'
+            },
+            contentStyle: {
+              backgroundColor: 'black',
+              minHeight: minHeight + 'px'
+            }
+          });
+        }
       }
     }
   }
