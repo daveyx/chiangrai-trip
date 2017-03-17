@@ -3,6 +3,23 @@
   h1 {
     font-size: 20px;
   }
+  /*.content {
+    min-height: 110px;
+  }*/
+}
+@media (max-width: 767px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+  .bgimg-1 {
+      background-image: url("/img/th-flag.jpg");
+      min-height: 300px;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
@@ -15,6 +32,19 @@
   h1 {
     font-size: 40px;
     padding-top: 50px;
+  }
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  	position: relative;
+  	opacity: 0.8;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	margin-bottom: 20px;
+  }
+  .bgimg-1 {
+      background-image: url("/img/th-flag.jpg");
+      min-height: 300px;
   }
 
 }
@@ -34,4 +64,22 @@ h1 {
 .content {
   color: white;
   padding: 20px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    background-color: #46b8da;
+}
+
+.border {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 5px;
 }

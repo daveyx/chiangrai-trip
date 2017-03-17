@@ -1,19 +1,20 @@
 'use strict';
 
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Header from './header.jsx';
 
 export default class BasePage extends Component {
   constructor(props) {
     super();
+
     this.state = {
       wrapperStyle: {
       },
       contentStyle: {
         backgroundImage: "url(" + props.imgName + ")",
         backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        minHeight: '650px'
+        backgroundRepeat: 'no-repeat'
       },
       imgName: props.imgName
     };
@@ -26,33 +27,37 @@ export default class BasePage extends Component {
   }
 
   handleResize(e = null) {
-    if (this.refs.home || this.refs.day) {
-    if (window.innerWidth >= 992) {
-      this.setState({
-        wrapperStyle: {
-          backgroundImage: "url(" + this.state.imgName + ")",
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '650px'
-        },
-        contentStyle: {
-          backgroundImage: 'none'
-        }
-      });
-    } else {
-      this.setState({
-        wrapperStyle: {
-          backgroundImage: 'none'
-        },
-        contentStyle: {
-          backgroundImage: "url(" + this.state.imgName + ")",
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '650px'
-        }
-      });
+    if (this.refs.home) {
+      if (window.innerWidth >= 992) {
+        var minHeight = Math.round(window.innerWidth / 3.5);
+        console.log(minHeight);
+        this.setState({
+          wrapperStyle: {
+            backgroundImage: "url(" + this.state.imgName + ")",
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat'
+          },
+          contentStyle: {
+            backgroundImage: 'none',
+            minHeight: minHeight + 'px'
+          }
+        });
+      } else {
+        var minHeight = Math.round(window.innerWidth / 3);
+        console.log(minHeight);
+        this.setState({
+          wrapperStyle: {
+            backgroundImage: 'none'
+          },
+          contentStyle: {
+            backgroundImage: "url(" + this.state.imgName + ")",
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            minHeight: minHeight + 'px'
+          }
+        });
+      }
     }
-  }
   }
 
   render() {
