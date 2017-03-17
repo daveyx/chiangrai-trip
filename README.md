@@ -10,6 +10,7 @@
 # our trip to chiang rai with my angel
 
 ## nginx config
+based on https://gkedge.gitbooks.io/react-router-in-the-real/content/nginx.html
 ```
 server {
 	server_name NAME_IN_HOSTSFILE;
