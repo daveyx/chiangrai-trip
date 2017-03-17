@@ -11,7 +11,7 @@ export default class BasePage extends Component {
       wrapperStyle: {
       },
       contentStyle: {
-        backgroundColor: 'black'
+        backgroundColor: 'grey'
       },
       imgName: props.imgName
     };
@@ -26,7 +26,7 @@ export default class BasePage extends Component {
   handleResize(e = null) {
     if (this.refs.home) {
       if (window.innerWidth >= 992) {
-        var minHeight = Math.round(window.innerWidth / 3.5);
+        var minHeight = Math.round(window.innerWidth / 3.5) + 10;
         if (this.state.imgName) {
           this.setState({
             wrapperStyle: {
@@ -42,7 +42,7 @@ export default class BasePage extends Component {
         } else {
           this.setState({
             wrapperStyle: {
-              backgroundColor: 'black'
+              backgroundColor: 'grey'
             },
             contentStyle: {
               backgroundImage: 'none',
@@ -51,7 +51,7 @@ export default class BasePage extends Component {
           });
         }
       } else {
-        var minHeight = Math.round(window.innerWidth / 3);
+        var minHeight = Math.round(window.innerWidth / 3) + 10;
         if (this.state.imgName) {
           this.setState({
             wrapperStyle: {
@@ -70,7 +70,7 @@ export default class BasePage extends Component {
               backgroundImage: 'none'
             },
             contentStyle: {
-              backgroundColor: 'black',
+              backgroundColor: 'grey',
               minHeight: minHeight + 'px'
             }
           });
