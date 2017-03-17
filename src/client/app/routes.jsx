@@ -18,12 +18,12 @@ export default class Routes extends React.Component {
               <Route path="/" component={App}>
                 <IndexRoute component={Home} />
                 <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
-                <Route path="day1" component={Day} />
+                <Route path="day2" component={Day} />
+                <Route path="day3" component={Day} />
+                <Route path="day4" component={Day} />
+                <Route path="day5" component={Day} />
+                <Route path="day6" component={Day} />
+                <Route path="day7" component={Day} />
               </Route>
               <Route path="*" component={App}>
                 <IndexRoute component={NotFound} />
