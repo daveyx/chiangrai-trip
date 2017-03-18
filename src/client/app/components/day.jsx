@@ -11,14 +11,19 @@ export default class Day extends BasePage {
     super('');
   }
 
+  handleResizeChild(e = null) {
+  }
+
   renderContent() {
     return (
-        <div ref="home" className="content" style={this.state.contentStyle}>
-          <h1 className="text-center">
-            {this.props.location.pathname} will be available soon, please check back later
-          </h1>
-          <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx">daveyx</a></div>
-      </div>
+        <main ref="content">
+          <div ref="day" className="content" style={this.state.contentStyle}>
+            <h1 className="text-center">
+              {this.props.location.pathname} will be available soon, please check back later
+            </h1>
+            <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx">daveyx</a></div>
+        </div>
+      </main>
     );
   }
 }

@@ -19,11 +19,14 @@ export default class Home extends BasePage {
     super(bgImage);
   }
 
+  handleResizeChild(e = null) {
+  }
+
   renderContent() {
     return (
-        <main>
+        <main ref="content">
           <div ref="home" className="content container-fluid" style={this.state.contentStyle}>
-              <h1 className="text-center">
+              <h1 className="text-center home-h1">
                 Trip to Chiang Rai with Jaae and David
               </h1>
               <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx">daveyx</a></div>

@@ -7,6 +7,7 @@ import App from './components/app.jsx';
 import Home from './components/home.jsx';
 import Day from './components/day.jsx';
 import NotFound from './components/notFound.jsx';
+import Contact from './components/contact.jsx';
 
 export default class Routes extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class Routes extends React.Component {
                 <Route path="day5" component={Day} />
                 <Route path="day6" component={Day} />
                 <Route path="day7" component={Day} />
+                <Route path="contact" component={Contact} />
               </Route>
               <Route path="*" component={App}>
                 <IndexRoute component={NotFound} />

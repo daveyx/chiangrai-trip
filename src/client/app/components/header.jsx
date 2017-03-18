@@ -119,6 +119,9 @@ class Menu extends React.Component {
                     <LinkContainer to="/day7">
                       <NavItem>Day 7</NavItem>
                     </LinkContainer>
+                    <LinkContainer to="/contact">
+                      <NavItem>Contact</NavItem>
+                    </LinkContainer>
                     <NavItem eventKey={'EN'} onClick={this.openEN.bind(this)}>EN</NavItem>
                     <NavItem eventKey={'TH'} onClick={this.openTH.bind(this)}>TH</NavItem>
                     <NavItem eventKey={'DE'} onClick={this.openDE.bind(this)}>DE</NavItem>

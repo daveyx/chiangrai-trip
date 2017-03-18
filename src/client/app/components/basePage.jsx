@@ -5,9 +5,10 @@ import ReactDOM from 'react-dom';
 import Header from './header.jsx';
 
 export default class BasePage extends Component {
-  constructor(props) {
+  constructor(props, localProps) {
     super();
     this.state = {
+      localProps,
       wrapperStyle: {
       },
       contentStyle: {
@@ -24,7 +25,7 @@ export default class BasePage extends Component {
   }
 
   handleResize(e = null) {
-    if (this.refs.home) {
+    if (this.refs.content) {
       if (window.innerWidth >= 992) {
         var minHeight = Math.round(window.innerWidth / 3.5) + 10;
         if (this.state.imgName) {
@@ -77,6 +78,7 @@ export default class BasePage extends Component {
         }
       }
     }
+    this.handleResizeChild();
   }
 
   render() {
