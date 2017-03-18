@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import Header from './header.jsx';
 
 export default class BasePage extends Component {
-  constructor(props, localProps) {
+  constructor(props, childProps) {
     super();
     this.state = {
-      localProps,
+      childProps,
       wrapperStyle: {
       },
       contentStyle: {
