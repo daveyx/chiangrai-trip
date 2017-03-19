@@ -114,6 +114,8 @@ export default class Home extends BasePage {
           <Grid>
             <Row>
               <Col xs={12}>
+                <p>Interested in Phuket, Thailand, Webdevelopment or Softwaredevelopment?</p>
+                <p>Contact me! I will respond quickly.</p>
                 <h2 className="text-center">Contact form</h2>
                 <Form horizontal id="contact-form" onSubmit={(e) => this.handleSubmit(e)}>
                   <FormGroup controlId="formHorizontalEmail">
