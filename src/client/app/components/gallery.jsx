@@ -16,6 +16,8 @@ export default class Gallery extends React.Component {
       <ImageGallery
         items={this.props.images}
         slideInterval={2000}
+        showIndex={true}
+        infinite={false}
         onImageLoad={this.handleImageLoad} />
     );
   }
