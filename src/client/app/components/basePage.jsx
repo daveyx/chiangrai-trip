@@ -5,17 +5,12 @@ import ReactDOM from 'react-dom';
 import Header from './header.jsx';
 
 export default class BasePage extends Component {
-  constructor(props, childProps) {
+  constructor(props, childStates) {
     super();
-    this.state = {
-      childProps,
-      wrapperStyle: {
-      },
-      contentStyle: {
-        backgroundColor: 'grey'
-      },
-      imgName: props.imgName
-    };
+    childStates.contentStyle = {};
+    childStates.imgName = props.imgName;
+    childStates.wrapperStyle = {};
+    this.state = childStates;
     this.handleResize = this.handleResize.bind(this);
   }
 

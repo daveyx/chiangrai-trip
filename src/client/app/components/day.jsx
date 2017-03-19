@@ -6,9 +6,11 @@ import BasePage from './basePage.jsx';
 //   imgName: BASENAME + "img/watrongkhun.jpg"
 // }
 
+const childStates = {};
+
 export default class Day extends BasePage {
   constructor(props) {
-    super('');
+    super('', childStates);
   }
 
   handleResizeChild(e = null) {

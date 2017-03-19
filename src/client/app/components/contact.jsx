@@ -18,38 +18,72 @@ const bgImage = {
   imgName: BASENAME + "img/contact.jpg"
 };
 
-const childProps = {
+const childStates = {
   h1Style: {
     fontSize: '12px',
     marginTop: '20px'
   },
   emailValue: '',
   subjectValue: '',
-  messageValue: ''
+  messageValue: '',
+  sendButtonText: 'Send'
 };
 
 export default class Home extends BasePage {
   constructor(props) {
-    super(bgImage, childProps);
-
-    // this.state = {value: ''};
-
+    super(bgImage, childStates);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangeSubject = this.handleChangeSubject.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({
+      sendButtonText: "sending..."
+    });
+
+    if (this.isEmail(this.state.emailValue) === false) {
+      alert("please provide a valid E-Mail address");
+      return null;
+    }
+    emailjs.init("user_cHwOetRKbvaczpM99yjXl");
+
+    let service_id = "daveyxga_gmail_com";
+    let template_id = "daveyx_ga_email_template";
+    let params = {
+      email: this.state.emailValue,
+      subject: this.state.subjectValue,
+      messagel: this.state.messageValue
+    };
+    emailjs.send(service_id,template_id,params)
+      .then(() => {
+         alert("Sent!");
+         this.setState({
+           sendButtonText: "Send"
+         });
+       }, (err) => {
+         alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+         this.setState({
+           sendButtonText: "Send"
+         });
+      });
   }
 
   handleChangeEmail(event) {
     this.setState({emailValue: event.target.value});
+    console.log(this.state.emailValue);
   }
 
   handleChangeSubject(event) {
-    this.setState(subjectValue: event.target.value});
+    this.setState({subjectValue: event.target.value});
+    console.log(this.state.subjectValue);
   }
 
   handleChangeMessage(event) {
@@ -95,7 +129,7 @@ export default class Home extends BasePage {
                       Subject:
                     </Col>
                     <Col sm={6}>
-                      <FormControl type="text" placeholder="Subject" />
+                      <FormControl type="text" placeholder="Subject" onChange={(e) => this.handleChangeSubject(e)} />
                     </Col>
                   </FormGroup>
                   <FormGroup controlId="formControlsTextarea">
@@ -103,13 +137,13 @@ export default class Home extends BasePage {
                       Message:
                     </Col>
                     <Col sm={6}>
-                      <FormControl componentClass="textarea" placeholder="Message" />
+                      <FormControl componentClass="textarea" placeholder="Message" onChange={(e) => this.handleChangeMessage(e)} />
                     </Col>
                   </FormGroup>
                   <FormGroup>
                     <Col smOffset={3} sm={8}>
-                      <Button type="submit" style={{'float': 'left'}}>
-                        Send
+                      <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
+                        {this.state.sendButtonText}
                       </Button>
                     </Col>
                   </FormGroup>

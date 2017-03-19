@@ -12,11 +12,13 @@ const bgImage = {
   imgName: BASENAME + "img/maejaedee.jpg"
 }
 
+const childStates = {};
+
 var initialCenter = { lng: 99.8325, lat: 19.90858 };
 
 export default class Home extends BasePage {
   constructor(props) {
-    super(bgImage);
+    super(bgImage, childStates);
   }
 
   handleResizeChild(e = null) {
