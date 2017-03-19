@@ -66,15 +66,20 @@ export default class Home extends BasePage {
               </div>
               <div className="col-xs-12 col-md-6">
                 <h3>About Chiang Rai</h3>
-                <p>The Chiang Rai province is the northernmost province in Thailand.</p>
-                <p>Chiang Rai city is the northernmost large city in Thailand.<br /></p>
-                <p>Wanna read more about Chiang Rai? Checkout the article at Wikipedia: <a href="https://en.wikipedia.org/wiki/Chiang_Rai_(city)" target="_blank" title="Chiang Rai at Wikipedia">click</a></p>
+                <p>The Chiang Rai province is the northernmost province in Thailand.
+                The province has boarder to Mayanmar and Laos. Very popular is the Golden Triangle, where
+                the three countries Thailand, Myanmar and Laos meet at the Mekong River.</p>
+                <p>Chiang Rai city is the northernmost large city in Thailand.</p>
+                <p>The nature in Chiang Rai province is amazing! A lot of mountains, beautiful landscape, lakes, nice temples and awesome waterfalls.</p>
+                <p>Chiang Rai is not as busy as Chiang Mai and has many quiet places and nice people everywhere.</p>
+                <p><br />Wanna read more about Chiang Rai? Checkout the article at Wikipedia: <a href="https://en.wikipedia.org/wiki/Chiang_Rai_(city)" target="_blank" title="Chiang Rai at Wikipedia">click</a></p>
               </div>
             </Row>
             <Row>
               <div className="col-xs-12">
                 <h2 className="text-center">Our trip from Phuket to Chiang Rai starts...</h2>
-                <Gallery images={images} />
+                <p>(click on the bottom right for full screen mode)<br />(click the 'play' button on the bottom left for a image show)</p>
+                <Gallery images={images}/>
               </div>
             </Row>
           </div>

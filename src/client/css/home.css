@@ -20,7 +20,7 @@
     margin-bottom: 20px;
   }
   .bgimg-1 {
-      background-image: url("/img/th-flag.jpg");
+      background-image: url("http://www.daveyx.ga/chiangrai-trip/img/th-flag.jpg");
       min-height: 300px;
   }
 }
@@ -46,7 +46,7 @@
   	margin-bottom: 20px;
   }
   .bgimg-1 {
-      background-image: url("/img/th-flag.jpg");
+      background-image: url("http://www.daveyx.ga/chiangrai-trip/img/th-flag.jpg");
       min-height: 300px;
   }
 
@@ -91,10 +91,6 @@ div {
     font-size: 40px;
     font-weight: bolder;
     letter-spacing: 5px;
-}
-
-footer {
-  margin-top: 250px;
 }
 .GMap {
   position: relative;

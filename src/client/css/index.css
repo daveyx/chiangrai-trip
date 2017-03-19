@@ -1,0 +1,13 @@
+.loader {
+  margin-top: 50px;
+  min-width: 480px;
+  min-height: 360px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+footer {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
