@@ -4,7 +4,8 @@ import React from 'react';
 import '../../css/home.css';
 import BasePage from './basePage.jsx';
 import {
-  Row
+  Row,
+  Col
 } from 'react-bootstrap';
 import GMap from './GoogleMaps';
 import Gallery from './gallery.jsx'
@@ -81,6 +82,11 @@ export default class Home extends BasePage {
                 <p>(click on the bottom right for full screen mode)<br />(click the 'play' button on the bottom left for a image show)</p>
                 <Gallery images={images}/>
               </div>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <p><br />Stay tuned... The documentation of our trip continues soon...</p>
+              </Col>
             </Row>
           </div>
         </main>
