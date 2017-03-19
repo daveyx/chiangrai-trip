@@ -45,14 +45,14 @@ export default class Home extends BasePage {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({
-      sendButtonText: "sending..."
-    });
 
     if (this.isEmail(this.state.emailValue) === false) {
       alert("please provide a valid E-Mail address");
       return null;
     }
+    this.setState({
+      sendButtonText: "sending..."
+    });
     emailjs.init("user_cHwOetRKbvaczpM99yjXl");
 
     let service_id = "daveyxga_gmail_com";
