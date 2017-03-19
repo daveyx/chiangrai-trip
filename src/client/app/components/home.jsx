@@ -65,7 +65,7 @@ export default class Home extends BasePage {
               <Col xs={12} md={6}>
                 <h3>About Chiang Rai</h3>
                 <p>The Chiang Rai province is the northernmost province in Thailand.
-                The province has boarder to Mayanmar and Laos. Very popular is the Golden Triangle, where
+                The province has borders to Mayanmar and Laos. Very popular is the Golden Triangle, where
                 the three countries Thailand, Myanmar and Laos meet at the Mekong River.</p>
                 <p>Chiang Rai city is the northernmost large city in Thailand.</p>
                 <p>The nature in Chiang Rai province is amazing! A lot of mountains, beautiful landscape, lakes, nice temples and awesome waterfalls.</p>
