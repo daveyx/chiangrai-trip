@@ -27,6 +27,11 @@ const images = [
     description: 'Bye bye Phuket, will miss you for sure, see ya soon...'
   },
   {
+    original: 'http://daveyx.ga/chiangrai-trip/img/day1/day1_1_100.jpg',
+    thumbnail: 'http://daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_100.jpg',
+    description: ''
+  },
+  {
     original: 'http://daveyx.ga/chiangrai-trip/img/day1/day1_1_10.jpg',
     thumbnail: 'http://daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_10.jpg',
     description: 'Beautiful Mai Khao beach of Phuket'
@@ -47,10 +52,20 @@ const images = [
     description: ''
   },
   {
+    original: 'http://daveyx.ga/chiangrai-trip/img/day1/day1_1_120.jpg',
+    thumbnail: 'http://daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_120.jpg',
+    description: ''
+  },
+  {
     original: 'http://daveyx.ga/chiangrai-trip/img/day1/day1_1_50.jpg',
     thumbnail: 'http://daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_50.jpg',
     description: 'This is a kind of steamed egg in banana leafs, very delicious! We had a lot of other food at a local market, but we did not take enough pictures, but the emotions are saved in our hearts for ever.'
-  }
+  },
+  {
+    original: 'http://daveyx.ga/chiangrai-trip/img/day1/day1_1_110.jpg',
+    thumbnail: 'http://daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_110.jpg',
+    description: ''
+  },
 ];
 
 export default images;
