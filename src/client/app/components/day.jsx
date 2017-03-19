@@ -1,3 +1,5 @@
+"use strict";
+
 import React, { Component } from 'react';
 import '../../css/day.css';
 import BasePage from './basePage.jsx';

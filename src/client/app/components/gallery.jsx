@@ -1,3 +1,5 @@
+"use strict";
+
 import ImageGallery from 'react-image-gallery';
 import React from 'react';
 
@@ -13,7 +15,7 @@ export default class Gallery extends React.Component {
     return (
       <ImageGallery
         items={this.props.images}
-        slideInterval={800}
+        slideInterval={2000}
         onImageLoad={this.handleImageLoad} />
     );
   }
