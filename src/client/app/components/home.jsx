@@ -7,6 +7,7 @@ import {
   Row
 } from 'react-bootstrap';
 import GMap from './GoogleMaps';
+import Gallery from './gallery.jsx'
 
 const bgImage = {
   imgName: BASENAME + "img/maejaedee.jpg"
@@ -57,18 +58,22 @@ export default class Home extends BasePage {
                 <h2 className="text-center">เชียงราย - Chiang Rai</h2>
               </div>
               <div className="col-xs-12 col-md-6">
-                Chiang Rai in Google Maps
+                <h3>Chiang Rai in Google Maps</h3>
                 <div className="map">
                   <GMap initialCenter={initialCenter} />
                 </div>
               </div>
               <div className="col-xs-12 col-md-6">
-                About Chiang Rai
+                <h3>About Chiang Rai</h3>
+                <p>The Chiang Rai province is the northernmost province in Thailand.</p>
+                <p>Chiang Rai city is the northernmost large city in Thailand.<br /></p>
+                <p>Wanna read more about Chiang Rai? Checkout the article at Wikipedia: <a href="https://en.wikipedia.org/wiki/Chiang_Rai_(city)" target="_blank" title="Chiang Rai at Wikipedia">click</a></p>
               </div>
             </Row>
             <Row>
               <div className="col-xs-12">
                 <h2 className="text-center">Our trip from Phuket to Chiang Rai starts...</h2>
+                <Gallery />
               </div>
             </Row>
           </div>
