@@ -1,5 +1,8 @@
 {"data": {
-  "intro": "On this day we first experienced Wat Rong Khun - the white temple...",
+  "introHeader": "Day 1 of our trip - Exploring Chiang Rai",
+  "introHeader2": "Summary of Day 1",
+  "introBody": "On this day we first experienced Wat Rong Khun - the white temple...",
+  "introImage": "http://www.daveyx.ga/chiangrai-trip/img/maejaedee.jpg",
   "activities": [
     {
       "activity": "asdf2"

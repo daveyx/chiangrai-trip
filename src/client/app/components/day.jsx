@@ -6,34 +6,40 @@ import '../../css/day.css';
 import BasePage from './basePage.jsx';
 import EmptyDay from './emptyDay.jsx';
 
-// const bgImage = {
-//   imgName: BASENAME + "img/watrongkhun.jpg"
-// }
+const bgImage = {
+  imgName: ""
+}
 
 const childStates = {data: {}};
 
 export default class Day extends BasePage {
   constructor(props) {
-    super('', childStates);
+    super(bgImage, childStates);
   }
 
   componentDidMountChild() {
-    var data = require('../data/day1.json');
-    this.setState({
-      data: data
-    });
-    console.log(this.state.data);
-    // read the day-data json:
-    // if (this.state.gallery.length == 0) {
-    //   axios.get("http://www.daveyx.ga/data/day1.json")
-    //     .then(response => {
-    //     this.setState({
-    //       gallery: response.data.data
-    //     });
-    //   }).catch(function (error) {
-    //     console.log("error axios-get1: " + error);
-    //   });
-    // }
+    if (this.props.location.pathname == "day1") {
+      var json = require('../data/day1.json');
+      // if ( ! this.state.data) {
+        this.setState({
+          data: json.data,
+          imgName: json.data.introImage
+        });
+      // }
+      // read the day-data json:
+      // if (this.state.gallery.length == 0) {
+      //   axios.get("http://www.daveyx.ga/data/day1.json")
+      //     .then(response => {
+      //     this.setState({
+      //       gallery: response.data.data
+      //     });
+      //   }).catch(function (error) {
+      //     console.log("error axios-get1: " + error);
+      //   });
+      // }
+
+      this.handleResize();
+    }
   }
 
   handleResizeChild(e = null) {
@@ -47,8 +53,8 @@ export default class Day extends BasePage {
             :
               <Row>
                 <Col xs={12}>
-                    <h1 className="text-center home-h1">
-                      Day 1 of our trip - Exploring Chiang Rai
+                    <h1 className="text-center">
+                      {this.state.data.introHeader}
                     </h1>
                </Col>
              </Row>
@@ -59,8 +65,11 @@ export default class Day extends BasePage {
             <Grid>
               <Row>
                 <Col xs={12}>
-                  <h2 className="text-center">Jaae and David experiencing the north of Thailand</h2>
+                  <h2 className="text-center">{this.state.data.introHeader2}</h2>
                  </Col>
+                <Col xs={12}>
+                  <p>{this.state.data.introBody}</p>
+                </Col>
                </Row>
             </Grid>
           }
