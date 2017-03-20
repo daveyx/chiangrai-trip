@@ -6,6 +6,7 @@ var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
+  devtool: "eval-source-map",
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
@@ -24,6 +25,9 @@ var config = {
         include : APP_DIR,
         exclude: /(node_modules|bower_components)/,
         loader : 'babel-loader'
+      }, {
+        test: /\.json$/,
+        loader: 'json-loader'
       }, {
         test: /\.css/,
         loader: ExtractTextPlugin.extract("css-loader")
