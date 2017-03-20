@@ -3,6 +3,7 @@ var path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var CSS_DIR = path.resolve(__dirname, 'src/client/css');
 
 var config = {
   entry: APP_DIR + '/index.jsx',
@@ -29,16 +30,9 @@ var config = {
         include : APP_DIR,
         loader : 'babel-loader'
       }, {
-        test: /\.css$/,
-        loader: 'style-loader'
-      }, {
-        test: /\.css$/, loader: "style-loader!css-loader"
-        // test: /\.css$/,
-        // loader: 'css-loader',
-        // query: {
-        //   modules: true,
-        //   localIdentName: '[name]__[local]___[hash:base64:5]'
-        // }
+        test: /\.css/,
+        loaders: ['style-loader', 'css-loader'],
+        include: CSS_DIR
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
