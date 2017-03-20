@@ -23,7 +23,6 @@ export default class Home extends BasePage {
 
   componentDidMount() {
     if (this.state.gallery.length == 0) {
-      console.log("---> doing the request...")
       axios.get("http://daveyx.ga/data/galleryHome.json")
         .then(response => {
           let data = response.data;
