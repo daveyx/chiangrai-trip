@@ -1,9 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
-var CSS_DIR = path.resolve(__dirname, 'src/client/css');
 
 var config = {
   entry: APP_DIR + '/index.jsx',
@@ -12,6 +12,7 @@ var config = {
     filename: 'bundle.js'
   },
   plugins: [
+    new ExtractTextPlugin("styles.css"),
     new webpack.DefinePlugin({
       BASENAME: JSON.stringify("/")
     })
@@ -25,8 +26,7 @@ var config = {
         loader : 'babel-loader'
       }, {
         test: /\.css/,
-        loaders: ['style-loader', 'css-loader'],
-        include: CSS_DIR
+        loader: ExtractTextPlugin.extract("css-loader")
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [

@@ -1,4 +1,5 @@
 node_modules/
 src/client/public/bundle.js
+src/client/public/styles.css
 src/client/public/img
 src/client/img/
