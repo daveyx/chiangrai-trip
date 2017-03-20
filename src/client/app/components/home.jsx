@@ -23,7 +23,7 @@ export default class Home extends BasePage {
 
   componentDidMountChild() {
     if (this.state.gallery.length == 0) {
-      axios.get("http://daveyx.ga/data/galleryHome.json")
+      axios.get("http://www.daveyx.ga/data/galleryHome.json")
         .then(response => {
         this.setState({
           gallery: response.data.data
@@ -44,7 +44,7 @@ export default class Home extends BasePage {
               <h1 className="text-center home-h1">
                 Trip to Chiang Rai with Jaae and David
               </h1>
-              <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx">daveyx</a></div>
+              <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx" target="_blank">daveyx</a></div>
           </Grid>
           <Grid>
             <Row>
