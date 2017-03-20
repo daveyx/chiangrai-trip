@@ -17,6 +17,10 @@ export default class BasePage extends Component {
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+    this.componentDidMountChild();
+  }
+
+  componentDidMountChild() {
   }
 
   handleResize(e = null) {

@@ -21,7 +21,7 @@ export default class Home extends BasePage {
     super(bgImage, childStates);
   }
 
-  componentDidMount() {
+  componentDidMountChild() {
     if (this.state.gallery.length == 0) {
       axios.get("http://daveyx.ga/data/galleryHome.json")
         .then(response => {
