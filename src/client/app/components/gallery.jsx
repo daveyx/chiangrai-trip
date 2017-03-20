@@ -19,7 +19,7 @@ export default class Gallery extends React.Component {
         slideInterval={2000}
         showIndex={true}
         infinite={false}
-        lazyLoad={true}
+        lazyLoad={false}
         onImageLoad={this.handleImageLoad} />
     );
   }
