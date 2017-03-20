@@ -25,10 +25,8 @@ export default class Home extends BasePage {
     if (this.state.gallery.length == 0) {
       axios.get("http://daveyx.ga/data/galleryHome.json")
         .then(response => {
-          let data = response.data;
-          console.log(response.data);
         this.setState({
-          gallery: data.data
+          gallery: response.data.data
         });
       }).catch(function (error) {
         console.log("error axios-get1: " + error);
