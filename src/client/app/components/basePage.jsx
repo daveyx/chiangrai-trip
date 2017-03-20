@@ -42,11 +42,11 @@ export default class BasePage extends Component {
         } else {
           this.setState({
             wrapperStyle: {
-              backgroundColor: 'grey'
             },
             contentStyle: {
               backgroundImage: 'none',
-              minHeight: minHeight + 'px'
+              minHeight: minHeight + 'px',
+              backgroundColor: 'grey'
             }
           });
         }
