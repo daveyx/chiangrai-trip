@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import '../../css/home.css';
-import BasePage from './basePage.jsx';
 import {Grid, Row, Col} from 'react-bootstrap';
 import GMap from './GoogleMaps';
 import Gallery from './gallery.jsx'

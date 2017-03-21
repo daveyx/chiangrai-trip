@@ -1,7 +1,6 @@
 'use strict';
 
-import React from 'react';
-import BasePage from './basePage.jsx';
+import React, { Component } from 'react';
 import '../../css/contact.css';
 import {
   Row,
@@ -14,28 +13,29 @@ import {
   Button
 } from 'react-bootstrap';
 
-const bgImage = {
-  imgName: BASENAME + "img/contact.jpg"
-};
+const bgImage = BASENAME + "img/contact.jpg";
 
-const childStates = {
-  h1Style: {
-    fontSize: '12px',
-    marginTop: '20px'
-  },
-  emailValue: '',
-  subjectValue: '',
-  messageValue: '',
-  sendButtonText: 'Send'
-};
-
-export default class Home extends BasePage {
+export default class Home extends Component {
   constructor(props) {
-    super(bgImage, childStates);
+    super();
+    this.state = {
+      h1Style: {
+        fontSize: '12px',
+        marginTop: '20px'
+      },
+      emailValue: '',
+      subjectValue: '',
+      messageValue: '',
+      sendButtonText: 'Send'
+    };
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangeSubject = this.handleChangeSubject.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
+  componentDidMount() {
+    this.props.setBgImage(bgImage);
   }
 
   isEmail(email) {
@@ -90,7 +90,7 @@ export default class Home extends BasePage {
     this.setState({messageValue: event.target.value});
   }
 
-  handleResizeChild(e = null) {
+  handleResize(e = null) {
     if (this.refs.contact) {
       let h1size = Math.round(window.innerWidth / 21);
       let h1MarginTop = Math.round(window.innerWidth / 16);
@@ -103,10 +103,10 @@ export default class Home extends BasePage {
     }
   }
 
-  renderContent() {
+  render() {
     return (
         <main className="contact" ref="content">
-          <Grid ref="contact" className="content" fluid style={this.state.contentStyle}>
+          <Grid ref="contact" className="content" fluid style={this.props.contentStyle}>
               <h1 className="text-center contact-h1" style={this.state.h1Style}>
                 Contact us and say 'hello'!
               </h1>
