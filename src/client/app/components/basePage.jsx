@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Header from './header.jsx';
 
 export default class BasePage extends Component {
   constructor(props, childStates) {
@@ -83,7 +82,6 @@ export default class BasePage extends Component {
   render() {
     return(
       <div id="wrapper" style={this.state.wrapperStyle}>
-        <Header />
         <div>{this.renderContent()}</div>
       </div>
     );

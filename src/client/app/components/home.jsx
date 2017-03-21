@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, { Component } from 'react';
 import '../../css/home.css';
 import BasePage from './basePage.jsx';
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -8,20 +8,22 @@ import GMap from './GoogleMaps';
 import Gallery from './gallery.jsx'
 import axios from 'axios';
 
-const bgImage = {
-  imgName: BASENAME + "img/maejaedee.jpg"
-}
+const bgImage = BASENAME + "img/maejaedee.jpg";
 
 const childStates = {gallery: []};
 
 var initialCenter = { lng: 99.8325, lat: 19.90858 };
 
-export default class Home extends BasePage {
+export default class Home extends Component {
   constructor(props) {
-    super(bgImage, childStates);
+    super();
+    this.state = {
+      gallery: []
+    };
   }
 
-  componentDidMountChild() {
+  componentDidMount() {
+    this.props.setBgImage(bgImage);
     if (this.state.gallery.length == 0) {
       axios.get("http://www.daveyx.ga/data/galleryHome.json")
         .then(response => {
@@ -34,13 +36,10 @@ export default class Home extends BasePage {
     }
   }
 
-  handleResizeChild(e = null) {
-  }
-
-  renderContent() {
+  render() {
     return (
         <main ref="content">
-          <Grid fluid ref="home" className="content" style={this.state.contentStyle}>
+          <Grid fluid ref="home" className="content" style={this.props.contentStyle}>
               <h1 className="text-center home-h1">
                 Trip to Chiang Rai with Jaae and David
               </h1>
