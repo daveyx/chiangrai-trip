@@ -8,18 +8,30 @@ import EmptyDay from './emptyDay.jsx';
 export default class Day extends Component {
   constructor(props) {
     super();
+    this.state = {
+      h1Style: {
+        fontSize: '12px',
+        marginTop: '30px'
+      }
+    };
+    this.handleResize = this.handleResize.bind(this);
   }
 
-  // componentDidMount() {
-  //   console.log("---> " + this.props.imgName)
-  //   this.props.setBgImage(this.props.imgName);
-  // }
-  //
-  // componentDidUpdate(nextProps) {
-  //   if (nextProps.pathname !== this.props.pathname) {
-  //     this.props.setBgImage(this.props.imgName);
-  //   }
-  // }
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+
+  handleResize(e = null) {
+    let h1size = Math.round(window.innerWidth / 21);
+    let h1MarginTop = Math.round(window.innerWidth / 16) + 10;
+    this.setState({
+      h1Style: {
+        fontSize: h1size + "px",
+        marginTop: h1MarginTop + "px"
+      }
+    });
+  }
 
   render() {
     return (
@@ -29,8 +41,7 @@ export default class Day extends Component {
             :
               <Row>
                 <Col xs={12}>
-                    <h1 className="text-center">
-                      introHeader:
+                    <h1 className="text-center" style={this.state.h1Style}>
                       {this.props.data.introHeader}
                     </h1>
                </Col>

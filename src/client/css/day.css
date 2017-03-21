@@ -1,0 +1,9 @@
+.day h1 {
+    background-color: #fff;
+    color: #000;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
