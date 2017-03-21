@@ -32,10 +32,13 @@ export default class Home extends Component {
     this.handleChangeSubject = this.handleChangeSubject.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
-  
+
   componentDidMount() {
     this.props.setBgImage(bgImage);
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   }
 
   isEmail(email) {
