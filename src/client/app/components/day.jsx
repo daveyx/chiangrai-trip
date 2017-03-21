@@ -10,9 +10,16 @@ export default class Day extends Component {
     super();
   }
 
-  componentDidMount() {
-    this.props.setBgImage(this.props.imgName);
-  }
+  // componentDidMount() {
+  //   console.log("---> " + this.props.imgName)
+  //   this.props.setBgImage(this.props.imgName);
+  // }
+  //
+  // componentDidUpdate(nextProps) {
+  //   if (nextProps.pathname !== this.props.pathname) {
+  //     this.props.setBgImage(this.props.imgName);
+  //   }
+  // }
 
   render() {
     return (
@@ -23,6 +30,7 @@ export default class Day extends Component {
               <Row>
                 <Col xs={12}>
                     <h1 className="text-center">
+                      introHeader:
                       {this.props.data.introHeader}
                     </h1>
                </Col>

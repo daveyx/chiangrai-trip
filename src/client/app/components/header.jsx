@@ -98,25 +98,25 @@ class Menu extends React.Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                   <Nav pullRight>
-                    <LinkContainer to="/day1">
+                    <LinkContainer to="/day/1">
                       <NavItem>Day 1</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day2">
+                    <LinkContainer to="/day/2">
                       <NavItem>Day 2</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day3">
+                    <LinkContainer to="/day/3">
                       <NavItem>Day 3</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day4">
+                    <LinkContainer to="/day/4">
                       <NavItem>Day 4</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day5">
+                    <LinkContainer to="/day/5">
                       <NavItem>Day 5</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day6">
+                    <LinkContainer to="/day/6">
                       <NavItem>Day 6</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/day7">
+                    <LinkContainer to="/day/7">
                       <NavItem>Day 7</NavItem>
                     </LinkContainer>
                     <LinkContainer to="/contact">

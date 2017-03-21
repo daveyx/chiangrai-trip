@@ -6,22 +6,26 @@ var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
+  devtool: "source-map",
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    sourceMapFilename: "bundle.js.map"
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),
     new webpack.DefinePlugin({
-      BASENAME: JSON.stringify("/chiangrai-trip/")
+      BASENAME: JSON.stringify("/sandbox/")
     }),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true
+    }), //minify everything
     new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
   ],
   module : {

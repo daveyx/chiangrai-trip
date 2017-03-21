@@ -18,13 +18,7 @@ export default class Routes extends React.Component {
     return  <Router history={useBasename(() => browserHistory)({ basename: BASENAME })}>
               <Route path="/" component={App}>
                 <IndexRoute component={Home} />
-                <Route path="day1" component={DayWrapper} />
-                <Route path="day2" component={DayWrapper} />
-                <Route path="day3" component={DayWrapper} />
-                <Route path="day4" component={DayWrapper} />
-                <Route path="day5" component={DayWrapper} />
-                <Route path="day6" component={DayWrapper} />
-                <Route path="day7" component={DayWrapper} />
+                <Route path="day/:dayNumber" component={DayWrapper} />
                 <Route path="contact" component={Contact} />
               </Route>
               <Route path="*" component={App}>

@@ -6,29 +6,38 @@ import Day from './day.jsx';
 export default class DayWrapper extends React.Component {
   constructor(props) {
     super();
-
+    let json = require('../data/emptyDay.json');
+    let data = {
+        data: json.data,
+        imgName: json.data.introImage
+    };
     this.state = {
-      data: {}
+      data: data
     };
   }
 
   componentDidMount() {
-      // }
-      // read the day-data json:
-      // if (this.state.gallery.length == 0) {
-      //   axios.get("http://www.daveyx.ga/data/day1.json")
-      //     .then(response => {
-      //     this.setState({
-      //       gallery: response.data.data
-      //     });
-      //   }).catch(function (error) {
-      //     console.log("error axios-get1: " + error);
-      //   });
-      // }
+    let data = this.getData();
+    this.setState({
+      data: data
+    }, function() {this.setBgImage()});
+  }
+
+  componentDidUpdate(nextProps) {
+    if (nextProps.params.dayNumber !== this.props.params.dayNumber) {
+      let data = this.getData();
+      this.setState({
+        data: data
+      }, function() {this.setBgImage()});
+    }
+  }
+
+  setBgImage() {
+    this.props.setBgImage(this.state.data.imgName);
   }
 
   getData() {
-    if (this.props.location.pathname !== "day1" && this.props.location.pathname !== "day2") {
+    if (this.props.params.dayNumber !== "1" && this.props.params.dayNumber !== "2") {
       let json = require('../data/emptyDay.json');
       let data = {
           data: json.data,
@@ -36,7 +45,7 @@ export default class DayWrapper extends React.Component {
       };
       return data;
     } else {
-      let tempData = localStorage.getItem(this.props.location.pathname);
+      let tempData = localStorage.getItem("day" + this.props.params.dayNumber);
       let forceReload = false;
       if (tempData) {
         let expires = JSON.parse(tempData).expires;
@@ -48,10 +57,8 @@ export default class DayWrapper extends React.Component {
       }
       if ( ! tempData || forceReload) {
         let expires = new Date().getTime();
-        console.log("init: now: " + new Date(expires).toISOString());
         expires += 30000;
-        console.log("init: expires: " + new Date(expires).toISOString());
-        let json = require('../data/' + this.props.location.pathname + '.json');
+        let json = require('../data/day' + this.props.params.dayNumber + '.json');
         let day = {
             data: json.data,
             imgName: json.data.introImage,
@@ -67,14 +74,14 @@ export default class DayWrapper extends React.Component {
   }
 
   render() {
-    var data = this.getData();
+    let pathname = "day" + this.props.params.dayNumber;
     return(
           <div>
             <Day
-              pathname={this.props.location.pathname}
+              pathname={pathname}
               contentStyle={this.props.contentStyle}
-              data={data.data}
-              imgName={data.imgName}
+              data={this.state.data.data}
+              imgName={this.state.data.imgName}
               setBgImage={this.props.setBgImage}
               />
           </div>
