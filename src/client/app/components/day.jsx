@@ -39,6 +39,9 @@ export default class Day extends Component {
   }
 
   render() {
+    var activityList = this.props.data.activities.map(function(activity, index){
+      return <Activity key={index} data={activity} />;
+    });
     return (
         <main ref="content">
           <Grid fluid ref="day" className={'day ' + this.props.pathname} style={this.props.contentStyle}>
@@ -84,8 +87,8 @@ export default class Day extends Component {
                     </div>
                   </div>
                 </Col>
-               </Row>
-              <Activity data={this.props.data.activities[0]} />
+              </Row>
+              {activityList}
             </Grid>
           }
         </main>
