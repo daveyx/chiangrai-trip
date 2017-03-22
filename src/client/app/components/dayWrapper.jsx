@@ -9,7 +9,7 @@ export default class DayWrapper extends React.Component {
     let json = require('../data/emptyDay.json');
     let data = {
         data: json.data,
-        imgName: json.data.introImage
+        imgName: json.data.bgImage
     };
     this.state = {
       data: data
@@ -41,7 +41,7 @@ export default class DayWrapper extends React.Component {
       let json = require('../data/emptyDay.json');
       let data = {
           data: json.data,
-          imgName: json.data.introImage
+          imgName: json.data.bgImage
       };
       return data;
     } else {
@@ -61,7 +61,7 @@ export default class DayWrapper extends React.Component {
         let json = require('../data/day' + this.props.params.dayNumber + '.json');
         let day = {
             data: json.data,
-            imgName: json.data.introImage,
+            imgName: json.data.bgImage,
             expires: expires
         };
         localStorage.setItem(this.props.location.pathname, JSON.stringify(day));

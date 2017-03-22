@@ -2,7 +2,8 @@
   "introHeader": "Exploring Chiang Rai",
   "introHeader2": "Summary of Day 1",
   "introBody": "On this day we first experienced Wat Rong Khun - the white temple. After that we've been visiting the Singha park, a huge beautiful area including something like a zoo. After that we went to Phra That Chom Si Thep, the highlight of the day on a small mountain in beautiful nature and no people.",
-  "introImage": "http://www.daveyx.ga/data/img/watrongkhun.jpg",
+  "bgImage": "http://www.daveyx.ga/data/img/watrongkhun.jpg",
+  "introImages": [],
   "activities": [
     {
       "activity": {

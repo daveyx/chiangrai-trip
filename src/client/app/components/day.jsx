@@ -63,9 +63,30 @@ export default class Day extends Component {
                 <Col xs={12}>
                   <p>{this.props.data.introBody}</p>
                 </Col>
+                <Col xs={12} sm={6} md={4}>
+                  <div className="zoom-effect-container">
+                    <div className="image-card">
+                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                    </div>
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} md={4}>
+                  <div className="zoom-effect-container">
+                    <div className="image-card">
+                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                    </div>
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} smOffset={3} md={4} mdOffset={0}>
+                  <div className="zoom-effect-container">
+                    <div className="image-card">
+                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                    </div>
+                  </div>
+                </Col>
                </Row>
               <Activity data={this.props.data.activities[0]} />
-              </Grid>
+            </Grid>
           }
         </main>
     );

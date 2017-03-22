@@ -2,7 +2,8 @@
   "introHeader": "",
   "introHeader2": "",
   "introBody": "",
-  "introImage": "",
+  "bgImage": "",
+  "introImages": [],
   "activities": [
     {
       "activity": {
