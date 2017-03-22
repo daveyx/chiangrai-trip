@@ -57,7 +57,7 @@ export default class DayWrapper extends React.Component {
       }
       if ( ! tempData || forceReload) {
         let expires = new Date().getTime();
-        expires += 30000;
+        expires += 3000;
         let json = require('../data/day' + this.props.params.dayNumber + '.json');
         let day = {
             data: json.data,

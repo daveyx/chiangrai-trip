@@ -8,7 +8,7 @@ import React from 'react';
 export default class GMap extends React.Component {
   constructor(props) {
     super();
-    this.state = { zoom: 8 };
+    this.state = { zoom: props.zoom };
   }
 
   static propTypes() {

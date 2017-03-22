@@ -1,14 +1,76 @@
 {"data": {
-  "introHeader": "Day 1 of our trip - Exploring Chiang Rai",
+  "introHeader": "Exploring Chiang Rai",
   "introHeader2": "Summary of Day 1",
-  "introBody": "On this day we first experienced Wat Rong Khun - the white temple...",
+  "introBody": "On this day we first experienced Wat Rong Khun - the white temple. After that we've been visiting the Singha park, a huge beautiful area including something like a zoo. After that we went to Phra That Chom Si Thep, the highlight of the day on a small mountain in beautiful nature and no people.",
   "introImage": "http://www.daveyx.ga/data/img/watrongkhun.jpg",
   "activities": [
     {
-      "activity": "asdf2"
+      "activity": {
+        "id": 1,
+        "activityHeader": "Wat Rong Khun - The White Temple",
+        "activityHeader2": "About Wat Rong Khun",
+        "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh <br /><a href='http://www.google.de' target='_blank'>google</a>"],
+        "position": {
+          "coordinates": {
+            "lng": 99.7629538,
+            "lat": 19.8240748
+          },
+          "zoom": 17,
+          "header": "Wat Rong Khun in Google Maps"
+        },
+        "galleryHeader": "Impressions of Wat Rong Khun",
+        "images": [
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_01.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_01.jpg",
+            "description": "We took only one luggage, as all lowcost carriers want the customer to pay extra for each luggage."
+          },
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_02.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_02.jpg",
+            "description": "As you can see, only one luggage was enough for us two... Any comments?"
+          },
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_70.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_70.jpg",
+            "description": "Near Phuket airport we had a bit time for a ice..."
+          }
+        ]
+      }
     },
     {
-      "activity": "asdf2"
+      "activity": {
+        "id": 2,
+        "activityHeader": "Wat Rong Khun - The White Temple",
+        "activityHeader2": "About Wat Rong Khun",
+        "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "position": {
+          "coordinates": {
+            "lng": 99.8325,
+            "lat": 19.90858
+          },
+          "zoom": 15,
+          "header": "Wat Rong Khun in Google Maps"
+        },
+        "galleryHeader": "",
+        "images": [
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_01.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_01.jpg",
+            "description": "We took only one luggage, as all lowcost carriers want the customer to pay extra for each luggage."
+          },
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_02.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_02.jpg",
+            "description": "As you can see, only one luggage was enough for us two... Any comments?"
+          },
+          {
+            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_70.jpg",
+            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_70.jpg",
+            "description": "Near Phuket airport we had a bit time for a ice..."
+          }
+        ]
+      }
     }
   ]
   }

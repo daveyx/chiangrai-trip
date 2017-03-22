@@ -5,10 +5,23 @@
   "introImage": "",
   "activities": [
     {
-      "activity": ""
-    },
-    {
-      "activity": ""
+      "activity": {
+        "id": 1,
+        "activityHeader": "",
+        "activityHeader2": "",
+        "activityBody": [],
+        "position": {
+          "coordinates": {
+            "lng": 0,
+            "lat": 0
+          },
+          "zoom": 1,
+          "header": ""
+        },
+        "galleryHeader": "",
+        "images": [
+        ]
+      }
     }
   ]
   }

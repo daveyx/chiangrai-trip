@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import '../../css/day.css';
 import EmptyDay from './emptyDay.jsx';
+import Activity from './activity.jsx';
 
 export default class Day extends Component {
   constructor(props) {
@@ -20,6 +21,10 @@ export default class Day extends Component {
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize, false);
   }
 
   handleResize(e = null) {
@@ -59,7 +64,8 @@ export default class Day extends Component {
                   <p>{this.props.data.introBody}</p>
                 </Col>
                </Row>
-            </Grid>
+              <Activity data={this.props.data.activities[0]} />
+              </Grid>
           }
         </main>
     );

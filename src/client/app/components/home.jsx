@@ -70,7 +70,7 @@ export default class Home extends Component {
               <Col xs={12} md={6}>
                 <h3>Chiang Rai in Google Maps</h3>
                 <div className="map">
-                  <GMap initialCenter={initialCenter} />
+                  <GMap initialCenter={initialCenter} zoom={8}/>
                 </div>
               </Col>
               <Col xs={12} md={6}>
