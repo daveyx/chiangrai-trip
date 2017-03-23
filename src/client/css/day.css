@@ -45,3 +45,7 @@
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
 }
+
+.activity-row {
+  margin-top: 20px;
+}

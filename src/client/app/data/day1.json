@@ -1,9 +1,9 @@
 {"data": {
   "introHeader": "Exploring Chiang Rai",
   "introHeader2": "Summary of Day 1",
-  "introBody": "On this day we first experienced Wat Rong Khun - the white temple. After that we've been visiting the Singha park, a huge beautiful area including something like a zoo. After that we went to Phra That Chom Si Thep, the highlight of the day on a small mountain in beautiful nature and no people.",
+  "introBody": ["On this day we first experienced Wat Rong Khun - the white temple.", "After Wat Rong Khun we've been visiting the Singha park, a huge beautiful area including something like a zoo.", "After that we went to Phra That Chom Si Thep for the sunset view. The highlight of the day on a small mountain in beautiful nature and no people.", "For dinner we went to Chiang Rai city for eat Khao Soy, famous local food. As the King Mengrai Monument was nearby, we visited it too, although we were really tired already."],
   "bgImage": "http://www.daveyx.ga/data/img/watrongkhun.jpg",
-  "introImages": [],
+  "introImages": ["http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg","http://www.daveyx.ga/data/chiangraitrip/day1/singhapark.jpg","http://www.daveyx.ga/data/chiangraitrip/day1/phrathatchomsithep.jpg"],
   "activities": [
     {
       "activity": {
@@ -21,55 +21,258 @@
         },
         "galleryHeader": "Impressions of Wat Rong Khun",
         "images": [
-          {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_01.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_01.jpg",
-            "description": "We took only one luggage, as all lowcost carriers want the customer to pay extra for each luggage."
-          },
-          {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_02.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_02.jpg",
-            "description": "As you can see, only one luggage was enough for us two... Any comments?"
-          },
-          {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_70.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_70.jpg",
-            "description": "Near Phuket airport we had a bit time for a ice..."
-          }
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1000.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1000.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1100.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1100.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1200.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1200.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1300.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1300.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1400.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1400.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1500.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1600.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1600.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1700.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1700.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1800.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1800.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_1900.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_1900.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2000.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2000.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2100.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2100.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2200.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2200.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2300.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2300.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2400.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2400.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2500.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2600.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2600.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2700.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2700.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2800.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2800.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_2900.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_2900.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3000.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3000.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3100.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3100.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3200.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3200.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3300.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3300.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3400.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3400.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3500.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3600.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3600.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3700.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3700.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3800.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3800.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_3900.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_3900.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4000.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4000.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4100.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4100.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4200.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4200.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4300.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4300.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4400.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4400.jpg",
+        		 "description": ""
+        	},
+        	{
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4500.jpg",
+        		 "description": ""
+        	}
         ]
       }
     },
     {
       "activity": {
         "id": 2,
-        "activityHeader": "Wat Rong Khun - The White Temple",
-        "activityHeader2": "About Wat Rong Khun",
+        "activityHeader": "Singha Park",
+        "activityHeader2": "About the Singha Park",
         "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
         "position": {
           "coordinates": {
-            "lng": 99.8325,
-            "lat": 19.90858
+            "lng": 99.7433744,
+            "lat": 19.8529981
           },
           "zoom": 15,
-          "header": "Wat Rong Khun in Google Maps"
+          "header": "Singha Park in Google Maps"
         },
         "galleryHeader": "",
         "images": [
           {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_01.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_01.jpg",
-            "description": "We took only one luggage, as all lowcost carriers want the customer to pay extra for each luggage."
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4500.jpg",
+        		 "description": ""
+        	}
+        ]
+      }
+    },
+    {
+      "activity": {
+        "id": 3,
+        "activityHeader": "Phra That Chom Si Thep",
+        "activityHeader2": "About Phra That Chom Si Thep",
+        "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "position": {
+          "coordinates": {
+            "lng": 99.7433744,
+            "lat": 19.8529981
           },
+          "zoom": 15,
+          "header": "Phra That Chom Si Thep in Google Maps"
+        },
+        "galleryHeader": "",
+        "images": [
           {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_02.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_02.jpg",
-            "description": "As you can see, only one luggage was enough for us two... Any comments?"
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4500.jpg",
+        		 "description": ""
+        	}
+        ]
+      }
+    },
+    {
+      "activity": {
+        "id": 4,
+        "activityHeader": "King Mengrai Monument",
+        "activityHeader2": "About the King Mengrai Monument",
+        "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "position": {
+          "coordinates": {
+            "lng": 99.7433744,
+            "lat": 19.8529981
           },
+          "zoom": 15,
+          "header": "King Mengrai Monument in Google Maps"
+        },
+        "galleryHeader": "",
+        "images": [
           {
-            "original": "http://www.daveyx.ga/chiangrai-trip/img/day1/day1_1_70.jpg",
-            "thumbnail": "http://www.daveyx.ga/chiangrai-trip/img/day1/thumbs/day1_1_70.jpg",
-            "description": "Near Phuket airport we had a bit time for a ice..."
-          }
+        		 "original": "http://www.daveyx.ga/data/chiangraitrip/day1/1/day2_1_4500.jpg",
+        		 "thumbnail": "http://www.daveyx.ga/data/chiangraitrip/day1/1/thumbs/day2_1_4500.jpg",
+        		 "description": ""
+        	}
         ]
       }
     }

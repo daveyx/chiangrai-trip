@@ -64,26 +64,28 @@ export default class Day extends Component {
                   <h2 className="text-center">{this.props.data.introHeader2}</h2>
                  </Col>
                 <Col xs={12}>
-                  <p>{this.props.data.introBody}</p>
+                  {this.props.data.introBody.map(function(data, index){
+                    return <p key={index}>{data}</p>;
+                  })}
                 </Col>
                 <Col xs={12} sm={6} md={4}>
                   <div className="zoom-effect-container">
                     <div className="image-card">
-                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                      <img src={this.props.data.introImages[0]} className="img-responsive center-block" />
                     </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={6} md={4}>
                   <div className="zoom-effect-container">
                     <div className="image-card">
-                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                      <img src={this.props.data.introImages[1]} className="img-responsive center-block" />
                     </div>
                   </div>
                 </Col>
                 <Col xs={12} sm={6} smOffset={3} md={4} mdOffset={0}>
                   <div className="zoom-effect-container">
                     <div className="image-card">
-                      <img src="http://www.daveyx.ga/data/chiangraitrip/day1/watrongkhun.jpg" className="img-responsive center-block" />
+                      <img src={this.props.data.introImages[2]} className="img-responsive center-block" />
                     </div>
                   </div>
                 </Col>

@@ -1,7 +1,7 @@
 {"data": {
   "introHeader": "Day 2 of our trip",
   "introHeader2": "Summary of Day 2",
-  "introBody": "day2...",
+  "introBody": ["day2..."],
   "bgImage": "http://www.daveyx.ga/data/img/watrongkhun.jpg",
   "introImages": [],
   "activities": [
