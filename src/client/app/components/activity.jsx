@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import GMap from './GoogleMaps';
 import Gallery from './gallery.jsx'
+import '../../css/activity.css';
 
 export default class Activity extends Component {
   constructor(props) {
@@ -20,9 +21,11 @@ export default class Activity extends Component {
     let activityId = Number(this.props.data.activity.id);
     let pullPushMd = 0;
     let pullPushXs = 0;
+    let bgColor = "bg-light-grey";
     if ((activityId+1) % 2 > 0) {
       pullPushMd = 6;
       pullPushXs = 12;
+      bgColor = "bg-white";
     }
     let content =
                 <Row>
@@ -45,7 +48,8 @@ export default class Activity extends Component {
                   </Col>
                 </Row>;
     return (
-      <div>
+      <div className={bgColor}>
+        <Grid>
         <Row className="activity-row">
           <Col xs={12}>
             <h2>{this.props.data.activity.activityHeader}</h2>
@@ -59,7 +63,8 @@ export default class Activity extends Component {
             <Gallery images={this.props.data.activity.images} />
           </Col>
         </Row>
-    </div>
+        </Grid>
+      </div>
     );
   }
 }

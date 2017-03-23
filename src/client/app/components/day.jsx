@@ -58,6 +58,7 @@ export default class Day extends Component {
           </Grid>
           {this.props.pathname !== "day1" && this.props.pathname !== "day2" ? null
           :
+          <div>
             <Grid>
               <Row>
                 <Col xs={12}>
@@ -90,8 +91,9 @@ export default class Day extends Component {
                   </div>
                 </Col>
               </Row>
-              {activityList}
             </Grid>
+              {activityList}
+            </div>
           }
         </main>
     );
