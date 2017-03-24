@@ -9,7 +9,8 @@ var config = {
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js'
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),
