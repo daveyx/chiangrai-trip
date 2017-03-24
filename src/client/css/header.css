@@ -23,14 +23,16 @@
     margin-bottom: 0;
 }
 @media (min-width: 768px) and (max-width: 771px) {
-  .App .navbar-header {
-    float: none;
+    .navbar-collapse.collapse {
+      display: none !important;
   }
-  .App .navbar-toggle {
-    display: block;
-    margin-right: 0;
+  .navbar-collapse.collapse.in {
+      display: block !important;
   }
-  .App .collapse {
-     display: none !important;
+  .navbar-header .collapse, .navbar-toggle {
+      display:block !important;
+  }
+  .navbar-header {
+      float:none;
   }
 }
