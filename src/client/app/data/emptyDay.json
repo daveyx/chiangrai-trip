@@ -11,6 +11,14 @@
         "activityHeader": "",
         "activityHeader2": "",
         "activityBody": [],
+        "activityLinks": [
+          {
+            "link": "",
+            "linkText": "",
+            "linkDescLeft": "",
+            "linkDescRight": ""
+          }
+        ],
         "position": {
           "coordinates": {
             "lng": 0,

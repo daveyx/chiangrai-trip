@@ -8,9 +8,23 @@
     {
       "activity": {
         "id": 1,
-        "activityHeader": "Wat Rong Khun - The White Temple",
+        "activityHeader": "Wat Rong Khun - วัดร่องขุ่น - The White Temple",
         "activityHeader2": "About Wat Rong Khun",
-        "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh <br /><a href='http://www.google.de' target='_blank'>google</a>"],
+        "activityBody": ["By the end of the 20th century, the original Wat Rong Khun was in a bad state of repair. Funds were not available for renovation. Chalermchai Kositpipat, a local artist from Chiang Rai, decided to completely rebuild the temple and fund the project with his own money.", "Nowadays this beautiful area is a tourist magnet and at least the the white building is a bit crowded by  people. But nevertheless it is worth a visit if you've never been there.", "We first checked out the garden, then moved to the main building and experienced the rest of the area afterwards. Soon i got uncomfortable with the many people and we went back near our car and found a small nice Café for rest.", "For Thai people free, foreigners must pay 50 Baht entrance fee."],
+        "activityLinks": [
+          {
+            "link": "https://en.wikipedia.org/wiki/Wat_Rong_Khun",
+            "linkText": "Wikipedia",
+            "linkDescLeft": "Wanna know more about Wat Rong Khun? Checkout the entry at ",
+            "linkDescRight": ". You can find interesting background information about the meaning of parts of the building, i.e. the bridge and the hands in front of the bridge."
+          },
+          {
+          "link": "https://www.tripadvisor.com/Attraction_Review-g297920-d1368436-Reviews-Wat_Rong_Khun-Chiang_Rai_Chiang_Rai_Province.html",
+          "linkText": "tripadvisor",
+          "linkDescLeft": "",
+          "linkDescRight": " is another good resource for information about Wat Rong Khun."
+          }
+        ],
         "position": {
           "coordinates": {
             "lng": 99.7629538,
@@ -207,9 +221,23 @@
     {
       "activity": {
         "id": 2,
-        "activityHeader": "Singha Park",
+        "activityHeader": "Singha Park - สิงห์ปาร์ค",
         "activityHeader2": "About the Singha Park",
         "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "activityLinks": [
+          {
+            "link": "https://en.wikipedia.org/wiki/Wat_Rong_Khun",
+            "linkText": "Wikipedia",
+            "linkDescLeft": "Wanna know more about Wat Rong Khun? Checkout the entry at ",
+            "linkDescRight": ""
+          },
+          {
+          "link": "https://www.tripadvisor.com/Attraction_Review-g297920-d1368436-Reviews-Wat_Rong_Khun-Chiang_Rai_Chiang_Rai_Province.html",
+          "linkText": "tripadvisor",
+          "linkDescLeft": "Another good resource for information about Wat Rong Khun is ",
+          "linkDescRight": ""
+          }
+        ],
         "position": {
           "coordinates": {
             "lng": 99.7433744,
@@ -436,9 +464,23 @@
     {
       "activity": {
         "id": 3,
-        "activityHeader": "Phra That Chom Si Thep",
+        "activityHeader": "Phra That Chom Si Thep - พระธาตุจอมศรีเทพ",
         "activityHeader2": "About Phra That Chom Si Thep",
         "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "activityLinks": [
+          {
+            "link": "https://en.wikipedia.org/wiki/Wat_Rong_Khun",
+            "linkText": "Wikipedia",
+            "linkDescLeft": "Wanna know more about Wat Rong Khun? Checkout the entry at ",
+            "linkDescRight": ""
+          },
+          {
+            "link": "https://www.tripadvisor.com/Attraction_Review-g297920-d1368436-Reviews-Wat_Rong_Khun-Chiang_Rai_Chiang_Rai_Province.html",
+            "linkText": "tripadvisor",
+            "linkDescLeft": "Another good resource for information about Wat Rong Khun is ",
+            "linkDescRight": ""
+          }
+        ],
         "position": {
           "coordinates": {
             "lng": 99.7433744,
@@ -580,9 +622,23 @@
     {
       "activity": {
         "id": 4,
-        "activityHeader": "King Mengrai Monument",
+        "activityHeader": "King Mengrai Monument - อนุสาวรีย์พ่อขุนเม็งรายมหาราช",
         "activityHeader2": "About the King Mengrai Monument",
         "activityBody": ["paragraph1 adsgasdfdggd", "paragraph2 cfhfdgjdfgjgdfjh"],
+        "activityLinks": [
+          {
+            "link": "https://en.wikipedia.org/wiki/Wat_Rong_Khun",
+            "linkText": "Wikipedia",
+            "linkDescLeft": "Wanna know more about Wat Rong Khun? Checkout the entry at ",
+            "linkDescRight": ""
+          },
+          {
+          "link": "https://www.tripadvisor.com/Attraction_Review-g297920-d1368436-Reviews-Wat_Rong_Khun-Chiang_Rai_Chiang_Rai_Province.html",
+          "linkText": "tripadvisor",
+          "linkDescLeft": "Another good resource for information about Wat Rong Khun is ",
+          "linkDescRight": ""
+          }
+        ],
         "position": {
           "coordinates": {
             "lng": 99.7433744,

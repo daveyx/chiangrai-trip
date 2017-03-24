@@ -45,6 +45,9 @@ export default class Activity extends Component {
                     {this.props.data.activity.activityBody.map(function(data, index){
                       return <p key={index}>{data}</p>;
                     })}
+                    {this.props.data.activity.activityLinks.map(function(data, index){
+                      return <p key={index}>{data.linkDescLeft} <a href={data.link} target="_blank">{data.linkText}</a>{data.linkDescRight}</p>;
+                    })}
                   </Col>
                 </Row>;
     return (
