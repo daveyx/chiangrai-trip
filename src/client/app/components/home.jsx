@@ -91,11 +91,6 @@ export default class Home extends Component {
                 {this.state.gallery !== null ? <Gallery images={this.state.gallery}/> : null}
               </Col>
             </Row>
-            <Row>
-              <Col xs={12}>
-                <p><br />Stay tuned... The documentation of our trip continues soon...</p>
-              </Col>
-            </Row>
           </Grid>
         </main>
     );

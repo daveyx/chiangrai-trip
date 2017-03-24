@@ -45,7 +45,7 @@ export default class Day extends Component {
     return (
         <main ref="content">
           <Grid fluid ref="day" className={'day ' + this.props.pathname} style={this.props.contentStyle}>
-            {this.props.pathname !== "day1" && this.props.pathname !== "day2" ? <EmptyDay pathname={this.props.pathname} />
+            {this.props.pathname !== "day1" ? <EmptyDay pathname={this.props.pathname} />
             :
               <Row>
                 <Col xs={12}>
@@ -56,7 +56,7 @@ export default class Day extends Component {
              </Row>
             }
           </Grid>
-          {this.props.pathname !== "day1" && this.props.pathname !== "day2" ? null
+          {this.props.pathname !== "day1" ? null
           :
           <div>
             <Grid>
@@ -92,8 +92,15 @@ export default class Day extends Component {
                 </Col>
               </Row>
             </Grid>
-              {activityList}
-            </div>
+            {activityList}
+            <Grid>
+              <Row>
+                <Col xs={12}>
+                  <p><br />Stay tuned... The documentation of our trip continues soon...</p>
+                </Col>
+              </Row>
+            </Grid>
+          </div>
           }
         </main>
     );

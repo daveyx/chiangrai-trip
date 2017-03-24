@@ -37,7 +37,7 @@ export default class DayWrapper extends React.Component {
   }
 
   getData() {
-    if (this.props.params.dayNumber !== "1" && this.props.params.dayNumber !== "2") {
+    if (this.props.params.dayNumber !== "1") {
       let json = require('../data/emptyDay.json');
       let data = {
           data: json.data,
