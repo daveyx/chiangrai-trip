@@ -115,46 +115,38 @@ export default class Home extends Component {
               </h1>
           </Grid>
           <Grid>
-            <Row>
-              <Col xs={12}>
-                <p className="contactInfo">Interested in Phuket, Thailand, Webdevelopment or Softwaredevelopment?<br />
-                Contact me! I will respond quickly.</p>
-                <h2 className="text-center">Contact form</h2>
-                <Form horizontal id="contact-form" onSubmit={(e) => this.handleSubmit(e)}>
+            <p className="contactInfo">Interested in Phuket, Thailand, Webdevelopment or Softwaredevelopment?<br />
+            Contact me! I will respond quickly.</p>
+            <div className="panel panel-default">
+                <Form id="contact-form" onSubmit={(e) => this.handleSubmit(e)}>
+                  <h2 className="text-center panel-heading">Contact form</h2>
                   <FormGroup controlId="formHorizontalEmail">
-                    <Col componentClass={ControlLabel} sm={2} smOffset={1}>
+                    <ControlLabel>
                       E-Mail*:
-                    </Col>
-                    <Col sm={6}>
-                      <FormControl type="email" placeholder="Email" onChange={(e) => this.handleChangeEmail(e)} />
-                    </Col>
+                    </ControlLabel>
+                    <FormControl type="email" placeholder="Email" onChange={(e) => this.handleChangeEmail(e)} />
                   </FormGroup>
                   <FormGroup controlId="formHorizontalSubject">
-                    <Col componentClass={ControlLabel} sm={2} smOffset={1}>
+                    <ControlLabel>
                       Subject:
-                    </Col>
-                    <Col sm={6}>
-                      <FormControl type="text" placeholder="Subject" onChange={(e) => this.handleChangeSubject(e)} />
-                    </Col>
+                    </ControlLabel>
+                    <FormControl type="text" placeholder="Subject" onChange={(e) => this.handleChangeSubject(e)} />
                   </FormGroup>
                   <FormGroup controlId="formControlsTextarea">
-                    <Col componentClass={ControlLabel} sm={2} smOffset={1}>
+                    <ControlLabel>
                       Message:
-                    </Col>
-                    <Col sm={6}>
+                    </ControlLabel>
                       <FormControl componentClass="textarea" placeholder="Message" onChange={(e) => this.handleChangeMessage(e)} />
-                    </Col>
                   </FormGroup>
                   <FormGroup>
-                    <Col smOffset={3} sm={8}>
+                    <ControlLabel>
+                    </ControlLabel>
                       <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
                         {this.state.sendButtonText}
                       </Button>
-                    </Col>
                   </FormGroup>
                 </Form>
-              </Col>
-            </Row>
+            </div>
           </Grid>
         </main>
       );
