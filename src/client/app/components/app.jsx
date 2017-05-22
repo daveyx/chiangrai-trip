@@ -6,13 +6,14 @@ import Header from './header.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       contentStyle: {},
       imgName: '',
       wrapperStyle: {}
     }
     this.handleResize = this.handleResize.bind(this);
+    this.setBgImage = this.setBgImage.bind(this);
   }
 
   componentDidMount() {
@@ -85,7 +86,7 @@ export default class App extends React.Component {
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
         contentStyle: this.state.contentStyle,
-        setBgImage: this.setBgImage.bind(this)
+        setBgImage: this.setBgImage
       })
     );
     return  <div>
