@@ -42,7 +42,7 @@ export default class Home extends Component {
               <h1 className="text-center home-h1">
                 Trip to Chiang Rai with Jaae and David
               </h1>
-              <div id="author" className="text-center">by <a href="http://www.daveyx.ga" title="daveyx" target="_blank">daveyx</a></div>
+              <div id="author" className="text-center">by <a href="https://www.daveyx.ga" title="daveyx" target="_blank">daveyx</a></div>
           </Grid>
           <Grid>
             <Row>
