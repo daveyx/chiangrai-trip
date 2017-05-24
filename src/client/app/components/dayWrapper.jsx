@@ -6,7 +6,7 @@ import Day from './day.jsx';
 export default class DayWrapper extends React.Component {
   constructor(props) {
     super();
-    let json = require('../data/emptyDay.json');
+    let json = require('../../data/emptyDay.json');
     let data = {
         data: json.data,
         imgName: json.data.bgImage
@@ -38,7 +38,7 @@ export default class DayWrapper extends React.Component {
 
   getData() {
     if (this.props.params.dayNumber !== "1") {
-      let json = require('../data/emptyDay.json');
+      let json = require('../../data/emptyDay.json');
       let data = {
           data: json.data,
           imgName: json.data.bgImage
@@ -58,7 +58,7 @@ export default class DayWrapper extends React.Component {
       if ( ! tempData || forceReload) {
         let expires = new Date().getTime();
         expires += 3000;
-        let json = require('../data/day' + this.props.params.dayNumber + '.json');
+        let json = require('../../data/day' + this.props.params.dayNumber + '.json');
         let day = {
             data: json.data,
             imgName: json.data.bgImage,

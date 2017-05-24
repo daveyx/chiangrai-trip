@@ -8,7 +8,6 @@ import Gallery from './gallery.jsx'
 import axios from 'axios';
 
 const bgImage = BASENAME + "img/maejaedee.jpg";
-
 const childStates = {gallery: []};
 
 var initialCenter = { lng: 99.8325, lat: 19.90858 };
@@ -24,7 +23,7 @@ export default class Home extends Component {
   componentDidMount() {
     this.props.setBgImage(bgImage);
     if (this.state.gallery.length == 0) {
-      axios.get("https://www.daveyx.ga/data/galleryHome.json")
+      axios.get("/data/galleryHome.json")
         .then(response => {
         this.setState({
           gallery: response.data.data
