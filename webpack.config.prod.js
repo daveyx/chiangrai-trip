@@ -1,21 +1,22 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
-var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: './src/client/app/index.jsx',
   output: {
-    path: BUILD_DIR,
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js'
+    path: path.resolve(__dirname, 'public'),
+    filename: 'js/[name].[chunkhash].js',
+    chunkFilename: 'js/[name].[chunkhash].js'
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("css/styles.css"),
     new webpack.DefinePlugin({
       BASENAME: JSON.stringify("/chiangrai-trip/")
+    }),
+    new HtmlWebpackPlugin({
+        template: 'src/index.html'
     }),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
@@ -29,7 +30,6 @@ var config = {
     loaders : [
       {
         test : /\.jsx?/,
-        include : APP_DIR,
         loader : 'babel-loader'
       }, {
         test: /\.json$/,

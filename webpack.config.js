@@ -1,28 +1,34 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
-var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
-  devtool: "eval-source-map",
-  entry: APP_DIR + '/index.jsx',
+  devServer: {
+    inline: true,
+    contentBase: './public',
+    port: 3000
+  },
+  devtool: "source-map",
+  entry: './src/client/app/index.jsx',
   output: {
-    path: BUILD_DIR,
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'public'),
+    filename: 'js/bundle.js',
+    publicPath: '/'
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("css/styles.css"),
     new webpack.DefinePlugin({
       BASENAME: JSON.stringify("/")
+    }),
+    new HtmlWebpackPlugin({
+        template: 'src/index.html'
     })
   ],
   module : {
     loaders : [
       {
         test : /\.jsx?/,
-        include : APP_DIR,
         exclude: /(node_modules|bower_components)/,
         loader : 'babel-loader'
       }, {
