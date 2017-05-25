@@ -8,7 +8,8 @@ var config = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/[name].[chunkhash].js',
-    sourceMapFilename: "js/[name].[chunkhash].js.map"
+    sourceMapFilename: "js/[name].[chunkhash].js.map",
+    publicPath: 'https://www.daveyx.ga/sandbox/'
   },
   plugins: [
     new ExtractTextPlugin("css/styles.css"),
