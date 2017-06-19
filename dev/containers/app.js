@@ -1,8 +1,6 @@
-'use strict';
-
 import React from 'react';
-import '../../css/app.css';
-import Header from './header.jsx';
+import '../css/app.css';
+import Header from '../components/header.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -23,9 +21,7 @@ export default class App extends React.Component {
   setBgImage(val) {
     this.setState({
       imgName: val
-    }, function () {
-        this.handleResize();
-      });
+    }, () => this.handleResize());
   }
 
   handleResize(e = null) {

@@ -1,5 +1,2 @@
 node_modules/
-src/client/img/
-public/css
-public/js
-public/index.html
+src/main/resources/static

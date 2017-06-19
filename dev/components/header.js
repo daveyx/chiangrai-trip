@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IndexLink } from 'react-router';
@@ -11,7 +9,7 @@ import {
   Button
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import '../../css/header.css';
+import '../css/header.css';
 
 export default class Header extends React.Component {
   constructor(props) {

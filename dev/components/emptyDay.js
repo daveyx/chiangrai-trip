@@ -1,16 +1,14 @@
-"use strict";
-
 import React, { Component } from 'react';
 
 export default class EmptyDay extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {
     return (
           <h1 className="text-center">
-            {this.props.pathname}  will be available soon, please check back later
+            This page will be available soon, please check back later
           </h1>
     );
   }

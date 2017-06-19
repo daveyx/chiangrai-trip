@@ -7,17 +7,10 @@ var BUILD_DIR = path.resolve(__dirname, './dist');
 
 module.exports = {
   entry: './dev/index.js',
-  devServer: {
-    inline: true,
-    contentBase: BUILD_DIR,
-    port: 3000
-  },
-  devtool: 'source-map',
-  cache: true,
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js',
-    publicPath: '/'
+    filename: 'bundle.[hash].js',
+    publicPath: '/chiangrai-trip'
   },
   module: {
     loaders: [
@@ -33,13 +26,18 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTextPlugin('css/styles.css'),
     new webpack.DefinePlugin({
-      BASENAME: JSON.stringify('/')
+      BASENAME: JSON.stringify('/chiangrai-trip/'),
     }),
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
     new HtmlWebpackPlugin({
         template: 'dev/index.html'
     })
