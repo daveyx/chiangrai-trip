@@ -14,8 +14,10 @@ export default class DayWrapper extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.location.pathname === '/' || this.props.params.dayNumber === '1') {
+    if (this.props.location.pathname === '/') {
       this.getData(0);
+    } else if (this.props.params.dayNumber === '1') {
+      this.getData(1);
     }
   }
 
