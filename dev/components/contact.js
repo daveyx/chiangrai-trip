@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import '../../css/contact.css';
+import '../css/contact.css';
 import {
   Row,
   Col,
@@ -19,10 +19,6 @@ export default class Home extends Component {
   constructor(props) {
     super();
     this.state = {
-      h1Style: {
-        fontSize: '12px',
-        marginTop: '20px'
-      },
       emailValue: '',
       subjectValue: '',
       messageValue: '',
@@ -32,7 +28,6 @@ export default class Home extends Component {
     this.handleChangeSubject = this.handleChangeSubject.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleResize = this.handleResize.bind(this);
   }
 
   componentDidMount() {
@@ -93,24 +88,11 @@ export default class Home extends Component {
     this.setState({messageValue: event.target.value});
   }
 
-  handleResize(e = null) {
-    if (this.refs.contact) {
-      let h1size = Math.round(window.innerWidth / 21);
-      let h1MarginTop = Math.round(window.innerWidth / 16);
-      this.setState({
-        h1Style: {
-          fontSize: h1size + "px",
-          marginTop: h1MarginTop + "px"
-        }
-      });
-    }
-  }
-
   render() {
     return (
         <main className="contact" ref="content">
-          <Grid ref="contact" className="content" fluid style={this.props.contentStyle}>
-              <h1 className="text-center contact-h1" style={this.state.h1Style}>
+          <Grid ref="contact" className="content" fluid>
+              <h1 className="text-center contact-h1">
                 Contact us and say 'hello'!
               </h1>
           </Grid>
