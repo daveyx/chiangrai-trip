@@ -5,6 +5,8 @@ import MapStyles from './mapStyles';
 import Script from 'react-load-script';
 import PropTypes from 'prop-types';
 
+let count = 0;
+
 export default class GMap extends React.Component {
   static get propTypes() {
     return {
@@ -38,14 +40,18 @@ export default class GMap extends React.Component {
 
   constructor(props){
     super(props);
+    count++;
     this.state = {
       center: null
     };
   }
 
+  componentDidMount() {
+  }
+
   loadMap() {
     const {config} = this.props;
-    if (this.state.scriptLoaded || this.props.id > 1) {
+    if (this.state.scriptLoaded || count > 1) {
       if (config && config.snapToUserLocation && navigator.geolocation) {
         this.getUserLocation();
       } else {
