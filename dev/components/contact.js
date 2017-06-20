@@ -1,4 +1,5 @@
 'use strict';
+/* global emailjs */
 
 import React, { Component } from 'react';
 import '../css/contact.css';
@@ -75,12 +76,10 @@ export default class Home extends Component {
 
   handleChangeEmail(event) {
     this.setState({emailValue: event.target.value});
-    console.log(this.state.emailValue);
   }
 
   handleChangeSubject(event) {
     this.setState({subjectValue: event.target.value});
-    console.log(this.state.subjectValue);
   }
 
   handleChangeMessage(event) {
@@ -101,7 +100,7 @@ export default class Home extends Component {
 
   handleScriptLoad() {
     this.setState({
-      showSendButton: false
+      showSendButton: true
     });
   }
 
@@ -147,7 +146,7 @@ export default class Home extends Component {
               <FormGroup>
                 <ControlLabel>
                 </ControlLabel>
-                { ! this.state.showSendButton ? null :
+                { ! this.state.showSendButton ? <p>Sorry, Email send functionality was not initialized</p> :
                   <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
                     {this.state.sendButtonText}
                   </Button>
