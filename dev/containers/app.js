@@ -9,7 +9,7 @@ export default class App extends React.Component {
       contentStyle: {},
       imgName: '',
       wrapperStyle: {}
-    }
+    };
     this.handleResize = this.handleResize.bind(this);
     this.setBgImage = this.setBgImage.bind(this);
   }
@@ -30,7 +30,7 @@ export default class App extends React.Component {
       if (this.state.imgName) {
         this.setState({
           wrapperStyle: {
-            backgroundImage: "url(" + this.state.imgName + ")",
+            backgroundImage: 'url(' + this.state.imgName + ')',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat'
           },
@@ -58,7 +58,7 @@ export default class App extends React.Component {
             backgroundImage: 'none'
           },
           contentStyle: {
-            backgroundImage: "url(" + this.state.imgName + ")",
+            backgroundImage: 'url(' + this.state.imgName + ')',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             minHeight: minHeight + 'px'
