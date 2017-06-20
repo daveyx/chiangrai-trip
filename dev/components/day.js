@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import '../css/day.css';
 import '../css/home.css';
-//import Activity from './activity.jsx';
 
 export default class Day extends Component {
   constructor(props) {
