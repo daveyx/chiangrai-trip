@@ -85,11 +85,13 @@ export default class App extends React.Component {
         setBgImage: this.setBgImage
       })
     );
-    return  <div>
-              <div id="wrapper" style={this.state.wrapperStyle}>
-                <Header />
-                { childrenWithProps }
-              </div>
-            </div>;
+    return(
+      <div>
+        <div id="wrapper" style={this.state.wrapperStyle}>
+          <Header />
+          { childrenWithProps }
+        </div>
+      </div>
+    );
   }
 }
