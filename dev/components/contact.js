@@ -44,31 +44,31 @@ export default class Home extends Component {
     event.preventDefault();
 
     if (this.isEmail(this.state.emailValue) === false) {
-      alert("please provide a valid E-Mail address");
+      alert('please provide a valid E-Mail address');
       return null;
     }
     this.setState({
-      sendButtonText: "sending..."
+      sendButtonText: 'sending...'
     });
-    emailjs.init("user_cHwOetRKbvaczpM99yjXl");
+    emailjs.init('user_cHwOetRKbvaczpM99yjXl');
 
-    let service_id = "daveyxga_gmail_com";
-    let template_id = "daveyx_ga_email_template";
+    let service_id = 'daveyxga_gmail_com';
+    let template_id = 'daveyx_ga_email_template';
     let params = {
       email: this.state.emailValue,
       subject: this.state.subjectValue,
       messagel: this.state.messageValue
     };
-    emailjs.send(service_id,template_id,params)
+    emailjs.send(service_id, template_id, params)
       .then(() => {
-         alert("Sent!");
+         alert('Sent!');
          this.setState({
-           sendButtonText: "Send"
+           sendButtonText: 'Send'
          });
        }, (err) => {
-         alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+         alert('Send email failed!\r\n Response:\n ' + JSON.stringify(err));
          this.setState({
-           sendButtonText: "Send"
+           sendButtonText: 'Send'
          });
       });
   }
