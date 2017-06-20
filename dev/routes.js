@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { useBasename } from 'history';
 import App from './containers/app.js';
 import DayWrapper from './containers/dayWrapper.js';
+import Contact from './components/contact';
 
 export default class Routes extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class Routes extends React.Component {
         <Route path="/" component={App}>
           <IndexRoute component={DayWrapper} />
           <Route path="day/:dayNumber" component={DayWrapper} />
+          <Route path="contact" component={Contact} />
         </Route>
       </Router>
     );
