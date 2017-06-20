@@ -89,53 +89,53 @@ export default class Home extends Component {
   render() {
     const url = 'https://cdn.emailjs.com/dist/email.min.js';
     return (
-        <main className="contact" ref="content">
-          <Script
-            url={url}
-            onCreate={this.handleScriptCreate.bind(this)}
-            onError={this.handleScriptError.bind(this)}
-            onLoad={this.handleScriptLoad.bind(this)}
-          />
-          <Grid ref="contact" className="content" fluid style={this.props.contentStyle}>
-              <h1 className="text-center contact-h1">
-                Contact us and say 'hello'!
-              </h1>
-          </Grid>
-          <Grid>
-            <p className="contactInfo">Interested in Phuket, Thailand, Webdevelopment or Softwaredevelopment?<br />
-            Contact me! I will respond quickly.</p>
-            <div className="panel panel-default">
-              <Form id="contact-form" onSubmit={(e) => this.handleSubmit(e)}>
-                <h2 className="text-center panel-heading">Contact form</h2>
-                <FormGroup controlId="formHorizontalEmail">
-                  <ControlLabel>
-                    E-Mail*:
-                  </ControlLabel>
-                  <FormControl type="email" placeholder="Email" onChange={(e) => this.handleChangeEmail(e)} />
-                </FormGroup>
-                <FormGroup controlId="formHorizontalSubject">
-                  <ControlLabel>
-                    Subject:
-                  </ControlLabel>
-                  <FormControl type="text" placeholder="Subject" onChange={(e) => this.handleChangeSubject(e)} />
-                </FormGroup>
-                <FormGroup controlId="formControlsTextarea">
-                  <ControlLabel>
-                    Message:
-                  </ControlLabel>
-                    <FormControl componentClass="textarea" placeholder="Message" onChange={(e) => this.handleChangeMessage(e)} />
-                </FormGroup>
-                <FormGroup>
-                  <ControlLabel>
-                  </ControlLabel>
-                    <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
-                      {this.state.sendButtonText}
-                    </Button>
-                </FormGroup>
-              </Form>
-            </div>
-          </Grid>
-        </main>
-      );
+      <main className="contact" ref="content">
+        <Script
+          url={url}
+          onCreate={this.handleScriptCreate.bind(this)}
+          onError={this.handleScriptError.bind(this)}
+          onLoad={this.handleScriptLoad.bind(this)}
+        />
+        <Grid ref="contact" className="content" fluid style={this.props.contentStyle}>
+            <h1 className="text-center contact-h1">
+              Contact us and say 'hello'!
+            </h1>
+        </Grid>
+        <Grid>
+          <p className="contactInfo">Interested in Phuket, Thailand, Webdevelopment or Softwaredevelopment?<br />
+          Contact me! I will respond quickly.</p>
+          <div className="panel panel-default">
+            <Form id="contact-form" onSubmit={(e) => this.handleSubmit(e)}>
+              <h2 className="text-center panel-heading">Contact form</h2>
+              <FormGroup controlId="formHorizontalEmail">
+                <ControlLabel>
+                  E-Mail*:
+                </ControlLabel>
+                <FormControl type="email" placeholder="Email" onChange={(e) => this.handleChangeEmail(e)} />
+              </FormGroup>
+              <FormGroup controlId="formHorizontalSubject">
+                <ControlLabel>
+                  Subject:
+                </ControlLabel>
+                <FormControl type="text" placeholder="Subject" onChange={(e) => this.handleChangeSubject(e)} />
+              </FormGroup>
+              <FormGroup controlId="formControlsTextarea">
+                <ControlLabel>
+                  Message:
+                </ControlLabel>
+                  <FormControl componentClass="textarea" placeholder="Message" onChange={(e) => this.handleChangeMessage(e)} />
+              </FormGroup>
+              <FormGroup>
+                <ControlLabel>
+                </ControlLabel>
+                  <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
+                    {this.state.sendButtonText}
+                  </Button>
+              </FormGroup>
+            </Form>
+          </div>
+        </Grid>
+      </main>
+    );
   }
 }
