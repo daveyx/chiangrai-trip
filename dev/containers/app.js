@@ -26,7 +26,7 @@ export default class App extends React.Component {
 
   handleResize(e = null) {
     if (window.innerWidth >= 992) {
-      var minHeight = Math.round(window.innerWidth / 3.5) + 10;
+      let minHeight = Math.round(window.innerWidth / 3.5) + 10;
       if (this.state.imgName) {
         this.setState({
           wrapperStyle: {
@@ -51,7 +51,7 @@ export default class App extends React.Component {
         });
       }
     } else {
-      var minHeight = Math.round(window.innerWidth / 3) + 10;
+      let minHeight = Math.round(window.innerWidth / 3) + 10;
       if (this.state.imgName) {
         this.setState({
           wrapperStyle: {
