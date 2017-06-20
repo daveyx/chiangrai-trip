@@ -18,6 +18,8 @@ export default class DayWrapper extends React.Component {
       this.getData(0);
     } else if (this.props.params.dayNumber === '1') {
       this.getData(1);
+    } else {
+      this.props.setBgImage();
     }
   }
 
@@ -27,6 +29,8 @@ export default class DayWrapper extends React.Component {
         this.getData(0);
       } else if (this.props.params.dayNumber === '1') {
         this.getData(this.props.params.dayNumber);
+      } else {
+        this.props.setBgImage();
       }
     }
   }
