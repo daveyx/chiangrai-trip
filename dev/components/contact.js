@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import '../css/contact.css';
+import Script from 'react-load-script';
 import {
   Row,
   Col,
@@ -86,6 +87,24 @@ export default class Home extends Component {
     this.setState({messageValue: event.target.value});
   }
 
+  handleScriptCreate() {
+    this.setState({
+      showSendButton: false
+    });
+  }
+
+  handleScriptError() {
+    this.setState({
+      showSendButton: false
+    });
+  }
+
+  handleScriptLoad() {
+    this.setState({
+      showSendButton: false
+    });
+  }
+
   render() {
     const url = 'https://cdn.emailjs.com/dist/email.min.js';
     return (
@@ -128,9 +147,11 @@ export default class Home extends Component {
               <FormGroup>
                 <ControlLabel>
                 </ControlLabel>
+                { ! this.state.showSendButton ? null :
                   <Button ref="sendButton" type="submit" style={{'float': 'left'}}>
                     {this.state.sendButtonText}
                   </Button>
+                }
               </FormGroup>
             </Form>
           </div>
