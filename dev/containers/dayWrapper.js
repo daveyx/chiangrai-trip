@@ -6,7 +6,7 @@ import EmptyDay from '../components/emptyDay.js';
 import ActivitiesWrapper from './activitiesWrapper.js';
 import {config} from '../config';
 import axios from 'axios';
-import {loadDataAction} from '../actions/index';
+import {loadDataAction, showLoader, hideLoader} from '../actions/index';
 
 class DayWrapper extends React.Component {
   constructor(props) {
@@ -50,6 +50,7 @@ class DayWrapper extends React.Component {
         data: this.props.savedData[key]
       }, () => this.setBgImage());
     } else {
+      this.props.showLoader();
       axios.get(config.API_URL + '/days/' + day)
         .then(response => {
           this.setState({
@@ -58,6 +59,7 @@ class DayWrapper extends React.Component {
             this.props.loadDataAction({
               day: day,
               data: this.state.data});
+            this.props.hideLoader();
             this.setBgImage();
           });
       }).catch(function (error) {
@@ -70,6 +72,11 @@ class DayWrapper extends React.Component {
     let pageType = this.props.location.pathname === '/' ? 'home' : 'day';
     let showDay = typeof this.props.params.dayNumber === 'undefined' || this.props.params.dayNumber === '1';
     let content;
+    let loader =
+      <div className="loader" style={this.props.loaderState}>
+        <img src="https://www.daveyx.ga/images/loader.gif" alt="loading..." />
+      </div>;
+
     if (showDay && this.state.data !== null) {
       const dayNumber = this.props.location.pathname === '/' ? 0 : this.props.params.dayNumber;
       const activities = <ActivitiesWrapper day={dayNumber} />;
@@ -88,6 +95,7 @@ class DayWrapper extends React.Component {
     }
     return(
       <div>
+        {loader}
         {content}
       </div>
     );
@@ -96,13 +104,16 @@ class DayWrapper extends React.Component {
 
 function mapStatesToProps(state) {
   return {
-    savedData: state.activeState
+    savedData: state.activeState,
+    loaderState: state.loaderState
   };
 }
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators({
-    loadDataAction: loadDataAction
+    loadDataAction: loadDataAction,
+    showLoader: showLoader,
+    hideLoader: hideLoader
   }, dispatch);
 }
 
