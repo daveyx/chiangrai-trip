@@ -1,11 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import Day from '../components/day.js';
 import EmptyDay from '../components/emptyDay.js';
 import ActivitiesWrapper from './activitiesWrapper.js';
 import {config} from '../config';
 import axios from 'axios';
+import {loadDataAction} from '../actions/index';
 
-export default class DayWrapper extends React.Component {
+class DayWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,14 +44,26 @@ export default class DayWrapper extends React.Component {
 
   getData(dayNumber) {
     let day = Number(dayNumber) + 1;
-    axios.get(config.API_URL + '/days/' + day)
-      .then(response => {
-        this.setState({
-          data: response.data
-        }, () => this.setBgImage());
-    }).catch(function (error) {
-      console.log('error axios-get1: ' + error);
-    });
+    const key = 'day' + day;
+    if (typeof this.props.savedData[key] !== 'undefined') {
+      this.setState({
+        data: this.props.savedData[key]
+      }, () => this.setBgImage());
+    } else {
+      axios.get(config.API_URL + '/days/' + day)
+        .then(response => {
+          this.setState({
+            data: response.data
+          }, () => {
+            this.props.loadDataAction({
+              day: day,
+              data: this.state.data});
+            this.setBgImage();
+          });
+      }).catch(function (error) {
+        console.log('error axios-get1: ' + error);
+      });
+    }
   }
 
   render() {
@@ -78,3 +93,17 @@ export default class DayWrapper extends React.Component {
     );
   }
 }
+
+function mapStatesToProps(state) {
+  return {
+    savedData: state.activeState
+  };
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({
+    loadDataAction: loadDataAction
+  }, dispatch);
+}
+
+export default connect(mapStatesToProps, matchDispatchToProps)(DayWrapper);
