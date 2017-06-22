@@ -61,7 +61,7 @@ class DayWrapper extends React.Component {
             this.setBgImage();
           });
       }).catch(function (error) {
-        console.log('error axios-get1: ' + error);
+        console.log('error axios getData(dayNumber): ' + error);
       });
     }
   }
@@ -74,14 +74,14 @@ class DayWrapper extends React.Component {
       const dayNumber = this.props.location.pathname === '/' ? 0 : this.props.params.dayNumber;
       const activities = <ActivitiesWrapper day={dayNumber} />;
       content =
-      <Day
-        pageType={pageType}
-        contentStyle={this.props.contentStyle}
-        data={this.state.data}
-        imgName={this.state.data.image}
-        setBgImage={this.props.setBgImage}
-        activities={activities}
-      />;
+        <Day
+          pageType={pageType}
+          contentStyle={this.props.contentStyle}
+          data={this.state.data}
+          imgName={this.state.data.image}
+          setBgImage={this.props.setBgImage}
+          activities={activities}
+        />;
     } else {
       content =
         <EmptyDay />;
