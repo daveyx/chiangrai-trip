@@ -4,7 +4,7 @@
   "description": "The trip to Chiang Rai with my angel with ReactJS + Spring Data REST",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daveyx/chiangrai-trip2.git"
+    "url": "https://github.com/daveyx/chiangrai-trip.git"
   },
   "author": "daveyx",
   "license": "http://www.wtfpl.net/",
