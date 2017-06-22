@@ -59,14 +59,19 @@ body {
   }
 }
 
+h1 {
+  font-size: 4vw;
+}
+
 .day h1 {
-    background-color: #fff;
-    color: #000;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  margin-top: 12vw;
 }
 
 .zoom-effect-container {
@@ -164,6 +169,7 @@ div {
 
 .home h1 {
   font-weight: 800;
+  margin-top: 3vw;
 }
 
 .home {
