@@ -6,26 +6,6 @@ import '../css/home.css';
 export default class Day extends Component {
   constructor(props) {
     super(props);
-    const marginTop = this.props.pageType === 'home' ? 3 : 15;
-    this.state = {
-      h1Style: {
-        fontSize: 4 + 'vw',
-        marginTop: marginTop + 'vw'
-      }
-    };
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.pageType !== this.props.pageType) {
-      console.log('day.js', this.props.data.title);
-      const marginTop = this.props.pageType === 'home' ? 3 : 10;
-      this.setState({
-        h1Style: {
-          fontSize: 4 + 'vw',
-          marginTop: marginTop + 'vw'
-        }
-      });
-    }
   }
 
   shouldComponentUpdate(nextProps) {
@@ -93,7 +73,7 @@ export default class Day extends Component {
           <Grid fluid ref="day" className={this.props.pageType} style={this.props.contentStyle}>
             <Row>
               <Col xs={12}>
-                  <h1 className="text-center" style={this.state.h1Style}>
+                  <h1 className="text-center">
                     {this.props.data.title}
                   </h1>
                   {subTitle}
