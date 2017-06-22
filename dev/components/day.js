@@ -17,6 +17,7 @@ export default class Day extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.pageType !== this.props.pageType) {
+      console.log('day.js', this.props.data.title);
       const marginTop = this.props.pageType === 'home' ? 3 : 10;
       this.setState({
         h1Style: {
@@ -25,6 +26,13 @@ export default class Day extends Component {
         }
       });
     }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if (this.props.data !== nextProps.data || this.props.contentStyle !== nextProps.contentStyle) {
+      return true;
+    }
+    return false;
   }
 
   render() {
