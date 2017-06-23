@@ -5,6 +5,7 @@ import { useBasename } from 'history';
 import App from './containers/app.js';
 import DayWrapper from './containers/dayWrapper.js';
 import Contact from './components/contact';
+import Login from './components/login';
 
 export default class Routes extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class Routes extends React.Component {
           <IndexRoute component={DayWrapper} />
           <Route path="day/:dayNumber" component={DayWrapper} />
           <Route path="contact" component={Contact} />
+          <Route path="login" component={Login} />
         </Route>
       </Router>
     );

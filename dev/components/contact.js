@@ -1,12 +1,8 @@
-'use strict';
 /* global emailjs */
-
 import React, { Component } from 'react';
 import '../css/contact.css';
 import Script from 'react-load-script';
 import {
-  Row,
-  Col,
   Grid,
   Form,
   ControlLabel,
