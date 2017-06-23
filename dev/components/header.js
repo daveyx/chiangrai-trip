@@ -106,10 +106,13 @@ class Menu extends React.Component {
               <LinkContainer to="/day/7">
                 <NavItem>Day 7</NavItem>
               </LinkContainer>
+              <NavItem eventKey={'EN'} onClick={this.openEN.bind(this)}>EN</NavItem>
               <LinkContainer to="/contact">
                 <NavItem>Contact</NavItem>
               </LinkContainer>
-              <NavItem eventKey={'EN'} onClick={this.openEN.bind(this)}>EN</NavItem>
+              <LinkContainer to="/login">
+                <NavItem>Login</NavItem>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
