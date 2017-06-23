@@ -5,14 +5,28 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, './dist');
 
-var config = {
+module.exports = {
   devtool: 'source-map',
-  entry: './src/client/app/index.jsx',
+  entry: './dev/index.js',
   output: {
     path: BUILD_DIR,
-    filename: 'js/[name].[chunkhash].js',
-    sourceMapFilename: 'js/[name].[chunkhash].js.map',
+    filename: 'bundle.[hash].js',
+    sourceMapFilename: 'bundle.[hash].js.map',
     publicPath: 'https://www.daveyx.ga/sandbox/'
+  },
+  module: {
+    loaders: [
+      {
+        test : /\.js?/,
+        exclude: /(node_modules|bower_components)/,
+        loader : 'babel-loader'
+      },
+      {
+        test: /\.css/,
+        exclude: /(node_modules|bower_components)/,
+        loader: ExtractTextPlugin.extract('css-loader')
+      }
+    ]
   },
   plugins: [
     new ExtractTextPlugin('css/styles.css'),
@@ -20,7 +34,7 @@ var config = {
       BASENAME: JSON.stringify('/sandbox/')
     }),
     new HtmlWebpackPlugin({
-        template: 'src/index.html'
+        template: 'dev/index.html'
     }),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
@@ -31,18 +45,5 @@ var config = {
       sourceMap: true
     }), //minify everything
     new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
-  ],
-  module : {
-    loaders : [
-      {
-        test : /\.js?/,
-        loader : 'babel-loader'
-      }, {
-        test: /\.css/,
-        loader: ExtractTextPlugin.extract('css-loader')
-      },
-    ]
-  }
+  ]
 };
-
-module.exports = config;
