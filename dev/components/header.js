@@ -61,20 +61,6 @@ class Menu extends React.Component {
     });
   }
 
-  openTH() {
-    this.setState({
-      showModal: true,
-      modalInfo: 'The thai language is currently not available.'
-    });
-  }
-
-  openDE() {
-    this.setState({
-      showModal: true,
-      modalInfo: 'The german language is currently not available.'
-    });
-  }
-
   render() {
     return(
       <div className="App" style={{paddingTop: this.state.navHeight}}>
@@ -124,8 +110,6 @@ class Menu extends React.Component {
                 <NavItem>Contact</NavItem>
               </LinkContainer>
               <NavItem eventKey={'EN'} onClick={this.openEN.bind(this)}>EN</NavItem>
-              <NavItem eventKey={'TH'} onClick={this.openTH.bind(this)}>TH</NavItem>
-              <NavItem eventKey={'DE'} onClick={this.openDE.bind(this)}>DE</NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
