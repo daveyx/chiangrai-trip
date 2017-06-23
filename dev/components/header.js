@@ -48,28 +48,28 @@ class Menu extends React.Component {
   close() {
     this.setState({
       showModal: false,
-      modalInfo: ""
+      modalInfo: ''
     });
   }
 
   openEN() {
     this.setState({
       showModal: true,
-      modalInfo: "The english language is displayed already."
+      modalInfo: 'The english language is displayed already.'
     });
   }
 
   openTH() {
     this.setState({
       showModal: true,
-      modalInfo: "The thai language is currently not available."
+      modalInfo: 'The thai language is currently not available.'
     });
   }
 
   openDE() {
     this.setState({
       showModal: true,
-      modalInfo: "The german language is currently not available."
+      modalInfo: 'The german language is currently not available.'
     });
   }
 
