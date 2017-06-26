@@ -21,7 +21,7 @@ export default class Login extends Component {
         <Grid>
           <Tabs defaultActiveKey={1} id="loginregister-tabs">
             <Tab eventKey={1} title="Login">
-              <LoginForm />
+              <LoginForm loginOAuth={this.props.loginOAuth} />
               <hr />
               <p>Or</p>
               <FBLogin />
