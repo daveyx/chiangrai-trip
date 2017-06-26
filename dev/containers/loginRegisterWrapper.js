@@ -12,7 +12,7 @@ class LoginRegisterWrapper extends React.Component {
     super(props);
     this.state = {
     };
-    this.loginOAuth = this.loginOAuth.bind(this)
+    this.loginOAuth = this.loginOAuth.bind(this);
   }
 
   loginOAuth(email, password) {
