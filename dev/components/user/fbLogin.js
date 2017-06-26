@@ -81,7 +81,7 @@ export default class FBLogin extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <a href="#" onClick={this.handleClick} onlogin={this.checkLoginState}>Login</a>
+          <a href="#" onClick={this.handleClick}>Login with Facebook</a>
           <div id="status"></div>
         </Col>
       </Row>
