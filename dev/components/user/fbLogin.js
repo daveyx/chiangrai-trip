@@ -1,6 +1,6 @@
 /* global FB*/
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 export default class FBLogin extends Component {
   constructor(props) {
