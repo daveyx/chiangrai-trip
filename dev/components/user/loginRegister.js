@@ -11,6 +11,15 @@ export default class Login extends Component {
   }
 
   render() {
+    const login =
+      <div>
+        <LoginForm
+          loginOAuth={this.props.loginOAuth}
+        />
+        <hr />
+        <p>Or</p>
+        <FBLogin />
+      </div>;
     return (
       <main>
         <Grid fluid style={this.props.contentStyle}>
@@ -21,10 +30,8 @@ export default class Login extends Component {
         <Grid>
           <Tabs defaultActiveKey={1} id="loginregister-tabs">
             <Tab eventKey={1} title="Login">
-              <LoginForm loginOAuth={this.props.loginOAuth} />
-              <hr />
-              <p>Or</p>
-              <FBLogin />
+              {this.props.loginInfo.loggedIn === true ? <p>{this.props.loginInfo.msg}</p> :
+              login}
             </Tab>
             <Tab eventKey={2} title="Registration">
               <RegistrationForm />

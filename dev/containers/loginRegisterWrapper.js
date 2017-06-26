@@ -10,7 +10,11 @@ import axios from 'axios';
 class LoginRegisterWrapper extends React.Component {
   constructor(props) {
     super(props);
+    console.log('LoginRegisterWrapper ctor');
     this.state = {
+      loginInfo: {
+        loggedIn: false
+      }
     };
     this.loginOAuth = this.loginOAuth.bind(this);
   }
@@ -28,6 +32,12 @@ class LoginRegisterWrapper extends React.Component {
          const token = response.data.access_token;
          console.log('userresponse ', response.data, token);
          this.props.loginOAuth(response.data);
+         this.setState({
+           loginInfo: {
+             loggedIn: true,
+             msg: 'Sucessfully logged in'
+           }
+         });
        })
        .catch((error) => {
          console.log('error loginOAuth()' + error);
@@ -36,7 +46,10 @@ class LoginRegisterWrapper extends React.Component {
 
   render() {
     return(
-      <LoginRegister loginOAuth={this.loginOAuth} />
+      <LoginRegister
+        loginOAuth={this.loginOAuth}
+        loginInfo={this.state.loginInfo}
+      />
     );
   }
 }
