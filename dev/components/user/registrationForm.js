@@ -20,7 +20,7 @@ export default class RegistrationForm extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <Form id="registration-form" onSubmit={(e) => this.handleSubmit(e)}>
+          <Form id="registration-form" onSubmit={(e) => this.handleSubmit(e)} className="loginregister-form">
             <FormGroup controlId="registrationformControlsUsername">
               <ControlLabel>Username</ControlLabel>
               <FormControl

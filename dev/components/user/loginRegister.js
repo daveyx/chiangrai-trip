@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, } from 'react-bootstrap';
+import { Grid, Tabs, Tab} from 'react-bootstrap';
 import FBLogin from './fbLogin';
 import LoginForm from './loginForm';
+import RegistrationForm from './registrationForm';
+import '../../css/loginregister.css';
 
 export default class Login extends Component {
   constructor(props) {
@@ -13,14 +15,21 @@ export default class Login extends Component {
       <main>
         <Grid fluid style={this.props.contentStyle}>
             <h1 className="text-center contact-h1">
-              Login!
+              Login / Registration
             </h1>
         </Grid>
         <Grid>
-          <LoginForm />
-          <hr />
-          <p>Or</p>
-          <FBLogin />
+          <Tabs defaultActiveKey={1} id="loginregister-tabs">
+            <Tab eventKey={1} title="Login">
+              <LoginForm />
+              <hr />
+              <p>Or</p>
+              <FBLogin />
+            </Tab>
+            <Tab eventKey={2} title="Registration">
+              <RegistrationForm />
+            </Tab>
+          </Tabs>
         </Grid>
       </main>
     );

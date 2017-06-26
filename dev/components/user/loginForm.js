@@ -19,7 +19,7 @@ export default class LoginForm extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <Form id="login-form" onSubmit={(e) => this.handleSubmit(e)}>
+          <Form id="login-form" onSubmit={(e) => this.handleSubmit(e)} className="loginregister-form">
             <FormGroup controlId="formControlsEmail">
               <ControlLabel>Email address</ControlLabel>
               <FormControl
