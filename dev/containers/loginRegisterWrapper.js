@@ -28,9 +28,6 @@ class LoginRegisterWrapper extends React.Component {
     axios.post(oAuthConfig.TOKEN_URL, Querystring.stringify(data),
       { headers: { Authorization: oAuthConfig.HTTP_AUTH } })
       .then(response => {
-         console.log(response);
-         const token = response.data.access_token;
-         console.log('userresponse ', response.data, token);
          this.props.loginOAuth(response.data);
          this.setState({
            loginInfo: {
