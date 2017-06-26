@@ -10,11 +10,17 @@ import axios from 'axios';
 class LoginRegisterWrapper extends React.Component {
   constructor(props) {
     super(props);
-    console.log('LoginRegisterWrapper ctor');
-    this.state = {
-      loginInfo: {
+    console.log('LoginRegisterWrapper ctor', this.props.authState);
+    const loginInfo = this.props.authState ?
+      {
+         loggedIn: true,
+         msg: 'Sucessfully logged in'
+       } :
+       {
         loggedIn: false
-      }
+      };
+    this.state = {
+      loginInfo: loginInfo
     };
     this.loginOAuth = this.loginOAuth.bind(this);
   }
