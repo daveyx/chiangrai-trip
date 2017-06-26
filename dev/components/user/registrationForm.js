@@ -10,9 +10,9 @@ export default class RegistrationForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const email = ReactDOM.findDOMNode(this.refs.emailField).value;
-    const password = ReactDOM.findDOMNode(this.refs.passwordField).value;
-    const username = ReactDOM.findDOMNode(this.refs.usernameField).value;
+    const email = ReactDOM.findDOMNode(this.refs.registrationemailField).value;
+    const password = ReactDOM.findDOMNode(this.refs.registrationpasswordField).value;
+    const username = ReactDOM.findDOMNode(this.refs.registrationusernameField).value;
     console.log(username, email, password);
   }
 
@@ -20,29 +20,29 @@ export default class RegistrationForm extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <Form id="login-form" onSubmit={(e) => this.handleSubmit(e)}>
-            <FormGroup controlId="formControlsUsername">
+          <Form id="registration-form" onSubmit={(e) => this.handleSubmit(e)}>
+            <FormGroup controlId="registrationformControlsUsername">
               <ControlLabel>Username</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Enter username"
-                ref="usernameField"
+                ref="registrationusernameField"
               />
             </FormGroup>
-            <FormGroup controlId="formControlsEmail">
+            <FormGroup controlId="registrationformControlsEmail">
               <ControlLabel>Email address</ControlLabel>
               <FormControl
                 type="email"
                 placeholder="Enter email"
-                ref="emailField"
+                ref="registrationemailField"
               />
             </FormGroup>
-            <FormGroup controlId="formControlsPassword">
+            <FormGroup controlId="registrationformControlsPassword">
               <ControlLabel>Password</ControlLabel>
               <FormControl
                 type="password"
                 placeholder="Enter password"
-                ref="passwordField"
+                ref="registrationpasswordField"
               />
             </FormGroup>
               <Button ref="sendButton" type="submit">
