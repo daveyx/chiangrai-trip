@@ -21,8 +21,6 @@ export default class RegistrationForm extends Component {
       <Row>
         <Col xs={12}>
           <Form id="login-form" onSubmit={(e) => this.handleSubmit(e)}>
-            <FormGroup controlId="formControlsEmail">
-              <ControlLabel>Email address</ControlLabel>
             <FormGroup controlId="formControlsUsername">
               <ControlLabel>Username</ControlLabel>
               <FormControl
@@ -30,6 +28,9 @@ export default class RegistrationForm extends Component {
                 placeholder="Enter username"
                 ref="usernameField"
               />
+            </FormGroup>
+            <FormGroup controlId="formControlsEmail">
+              <ControlLabel>Email address</ControlLabel>
               <FormControl
                 type="email"
                 placeholder="Enter email"
