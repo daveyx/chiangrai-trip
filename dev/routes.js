@@ -5,7 +5,7 @@ import { useBasename } from 'history';
 import App from './containers/app.js';
 import DayWrapper from './containers/dayWrapper.js';
 import Contact from './components/contact';
-import LoginRegister from './components/user/loginRegister';
+import LoginRegisterWrapper from './containers/loginRegisterWrapper';
 
 export default class Routes extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class Routes extends React.Component {
           <IndexRoute component={DayWrapper} />
           <Route path="day/:dayNumber" component={DayWrapper} />
           <Route path="contact" component={Contact} />
-          <Route path="/user/loginregister" component={LoginRegister} />
+          <Route path="/user/loginregister" component={LoginRegisterWrapper} />
         </Route>
       </Router>
     );
