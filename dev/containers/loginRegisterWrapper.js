@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {loginOAuth} from '../actions/index';
 import LoginRegister from '../components/user/loginRegister.js';
-import {config} from '../config';
+import {oAuthConfig} from '../config';
 import Querystring from 'query-string';
 import axios from 'axios';
 
@@ -17,14 +17,12 @@ class LoginRegisterWrapper extends React.Component {
 
   loginOAuth(email, password) {
     const data = {
-      grant_type: 'password',
-      Authorization: 'Basic ZGF2ZXl4OnNlY3JldA==',
+      grant_type: oAuthConfig.GRANT_TYPE,
       username: email,
       password: password
     };
-
-    axios.post('http://localhost:6060/oauth/token', Querystring.stringify(data),
-      { headers: { Authorization: 'Basic ZGF2ZXl4OnNlY3JldA==' } })
+    axios.post(oAuthConfig.TOKEN_URL, Querystring.stringify(data),
+      { headers: { Authorization: oAuthConfig.HTTP_AUTH } })
       .then(response => {
          console.log(response.data);
          const token = response.data.access_token;
