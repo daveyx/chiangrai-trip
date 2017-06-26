@@ -12,7 +12,6 @@ export default class LoginForm extends Component {
     event.preventDefault();
     const email = ReactDOM.findDOMNode(this.refs.emailField).value;
     const password = ReactDOM.findDOMNode(this.refs.passwordField).value;
-    console.log(email, password);
     this.props.loginOAuth(email, password);
   }
 
