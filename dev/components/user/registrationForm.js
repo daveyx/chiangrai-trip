@@ -46,7 +46,7 @@ export default class RegistrationForm extends Component {
               />
             </FormGroup>
               <Button ref="sendButton" type="submit">
-                Login
+                Register
               </Button>
           </Form>
         </Col>
