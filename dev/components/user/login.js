@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Grid } from 'react-bootstrap';
+import { Grid, } from 'react-bootstrap';
 import FBLogin from './fbLogin';
+import LoginForm from './loginForm';
 
 export default class Login extends Component {
   constructor(props) {
@@ -16,6 +17,9 @@ export default class Login extends Component {
             </h1>
         </Grid>
         <Grid>
+          <LoginForm />
+          <hr />
+          <p>Or</p>
           <FBLogin />
         </Grid>
       </main>
