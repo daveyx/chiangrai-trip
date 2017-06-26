@@ -14,3 +14,9 @@ export const hideLoader = () => {
     type: 'HIDE_LOADER'
   };
 };
+export const loginOAuth = (data) => {
+  return {
+    type: 'LOGIN_OAUTH',
+    payload: data
+  };
+};
