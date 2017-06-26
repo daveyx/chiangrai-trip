@@ -110,7 +110,7 @@ class Menu extends React.Component {
               <LinkContainer to="/contact">
                 <NavItem>Contact</NavItem>
               </LinkContainer>
-              <LinkContainer to="/login">
+              <LinkContainer to="/user/login">
                 <NavItem>Login</NavItem>
               </LinkContainer>
             </Nav>
