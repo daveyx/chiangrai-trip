@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import Cookies from 'universal-cookie';
 import {loginOAuth} from '../actions/index';
 import LoginRegister from '../components/user/loginRegister.js';
 import {oAuthConfig} from '../config';
@@ -40,6 +41,9 @@ class LoginRegisterWrapper extends React.Component {
              msg: 'Sucessfully logged in'
            }
          });
+         const expireDate = new Date (new Date().getTime() + (1000 * response.data.expires_in));
+         const cookies = new Cookies();
+         cookies.set('access_token', response.data.access_token, {path: '/', expires: expireDate});
        })
        .catch((error) => {
          console.log('error loginOAuth()' + error);
